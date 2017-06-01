@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Taxonomy API: Core category-specific functionality

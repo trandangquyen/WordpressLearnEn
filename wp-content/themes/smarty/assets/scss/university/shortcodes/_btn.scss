@@ -1,0 +1,417 @@
+.stm-btn {
+	display: inline-block;
+	border-width: 2px;
+    border-radius: 4px;
+	border-style: solid;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+	transform: translateZ(0);
+	box-sizing: border-box !important;
+	@include transition();
+
+	i {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.stm-icon-arrow-right {
+	font-size: 6px;
+
+	.stm-btn_size_sm & {
+		margin-top: -1.5px;
+		font-size: 5px;
+	}
+}
+
+.stm-btn__icon {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	line-height: 1;
+
+	* {
+		vertical-align: top;
+	}
+}
+
+
+.stm-btn_icon_right {
+	> i,
+	.stm-btn__icon {
+		padding-left: 6px;
+	}
+}
+
+.stm-btn_icon_left {
+	> i,
+	.stm-btn__icon {
+		padding-right: 6px;
+	}
+}
+
+.stm-btn_position_right {
+	float: right;
+}
+
+/* Outline
+------------------- */
+.stm-btn_style_outline {
+	// Sizes
+	&.stm-btn_size_lg {
+		height: 50px;
+		padding: 0 25px;
+		line-height: 46px;
+		font-size: 16px;
+	}
+
+	&.stm-btn_size_sm {
+		height: 40px;
+		padding: 0 20px;
+		line-height: 36px;
+		font-size: 13px;
+	}
+
+	// Colors
+  	&.stm-btn_theme_blue {
+		border-color: $blue;
+		color: $dark-blue;
+		background: $white;
+
+		&:focus {
+			background: $white;
+			color: $dark-blue;
+		}
+
+		&:hover {
+			background: $blue;
+			color: $white;
+		}
+
+		&:active {
+			border-color: #007fbf;
+			background: #007fbf;
+			color: $white;
+		}
+
+		&.stm-btn_state_disabled {
+			background: $white;
+			border-color: #d9d9d9;
+			color: $light-gray;
+			cursor: not-allowed;
+		}
+	}
+
+	&.stm-btn_theme_blue-2 {
+		border-color: $blue;
+		color: $white;
+		background: transparent;
+
+		&:focus {
+			background: transparent;
+			color: $white;
+		}
+
+		&:hover {
+			background: $blue;
+			color: $white;
+		}
+
+		&:active {
+			border-color: #007fbf;
+			background: #007fbf;
+			color: $white;
+		}
+
+		&.stm-btn_state_disabled {
+			background: $white;
+			border-color: #d9d9d9;
+			color: $light-gray;
+			cursor: not-allowed;
+		}
+	}
+
+	&.stm-btn_theme_white {
+		border-color: $white;
+		color: $white;
+
+		&:focus {
+			color: $white;
+			background: transparent;
+		}
+
+		&:hover {
+			background: $white;
+			color: $green;
+		}
+
+		&:active {
+			background: $white;
+			color: $green;
+			opacity: .75;
+		}
+
+		&.stm-btn_state_disabled {
+			&:active,
+			&:focus,
+			&:hover {
+				background: transparent;
+				color: $white;
+			}
+		}
+	}
+
+	&.stm-btn_theme_error {
+		border-color: #e62117;
+		color: $dark-blue;
+
+		i {
+			color: #cc181e;
+		}
+
+		&:focus {
+			color: $dark-blue;
+			background: transparent;
+		}
+
+		&:hover {
+			background: #e62117;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+
+		&:active {
+			background: #cc181e;
+			border-color: #cc181e;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+
+	&.stm-btn_theme_warning {
+		border-color: #ff9337;
+		color: $dark-blue;
+
+		i {
+			color: #ff5137;
+		}
+
+		&:focus {
+			color: $dark-blue;
+			background: transparent;
+		}
+
+		&:hover {
+			background: #ff9337;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+
+		&:active {
+			background: #ff5137;
+			border-color: #ff5137;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+}
+
+// Flat
+.stm-btn_style_flat {
+	 &.stm-btn_size_lg {
+		 height: 50px;
+		 padding: 0 15px;
+		 line-height: 46px;
+		 font-size: 16px;
+	 }
+
+	&.stm-btn_theme_blue {
+		border-color: $blue;
+		background: $blue;
+		color: $white;
+
+		&:focus {
+			background: $blue;
+		}
+
+		&:hover {
+			background: transparent;
+			color: $dark-blue;
+		}
+
+		&:active {
+			border-color: #007fbf;
+			background: #007fbf;
+			color: $white;
+		}
+
+		&.stm-btn_state_disabled {
+			background: transparent;
+			border-color: #d9d9d9;
+			color: $light-gray;
+			cursor: not-allowed;
+		}
+	}
+}
+
+/* Download
+------------------- */
+.stm-btn-download {
+	display: block;
+    position: relative;
+	padding: 20px 25px 30px;
+	white-space: nowrap;
+	transform: translateZ(0);
+	@include transition();
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.stm-btn-download__body {
+	display: table;
+	width: 100%;
+    position: relative;
+}
+
+.stm-btn-download__icon {
+	display: table-cell;
+	vertical-align: middle;
+
+	img {
+		display: inline-block;
+		width: 1em;
+		height: auto;
+	}
+}
+
+.stm-btn-download__content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.stm-btn-download__text {
+	display: block;
+	line-height: 20px;
+}
+
+.stm-btn-download__subtext {
+	display: block;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+// Sizes
+.stm-btn-download_full-width {
+	display: block;
+}
+
+// Colors
+.stm-btn-download_white {
+	background: $white;
+    padding-bottom: 25px;
+
+	.stm-btn-download__text {
+        margin-bottom: 5px;
+		color: $dark-red;
+        font-size: 15px;
+	}
+
+	.stm-btn-download__subtext {
+		color: $gray;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-size: 13px;
+	}
+
+	&:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.stm-btn-download_grey {
+	background: #f8f8f8;
+
+	.stm-btn-download__text {
+		color: $dark-blue;
+	}
+
+	.stm-btn-download__subtext {
+		color: $gray;
+	}
+
+	&:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.stm-btn-download_icon-left {
+	.stm-btn-download__content {
+		padding-left: 10px;
+	}
+}
+
+.stm-btn-download_icon-right {
+	.stm-btn-download__icon {
+		padding-right: 10px;
+	}
+}
+
+.stm-btn-download_transparent {
+  background-color: transparent;
+
+  .stm-btn-download__text {
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    color: #ff4040;
+  }
+
+  .stm-btn-download__subtext {
+    font-style: normal;
+    font-size: 18px;
+    color: $white;
+  }
+}
+
+.stm-btn-download__icon_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+}

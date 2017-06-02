@@ -1,0 +1,43 @@
+.stm-teacher-bio__photo {
+	margin: {
+		top: 10px;
+		bottom: 17px;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.stm-teacher-bio__title {
+	margin-bottom: 6px;
+	font: {
+		size: 15px;
+		weight: 600;
+	}
+	line-height: normal;
+}
+
+.stm-teacher-bio__position {
+	font-size: 15px;
+	color: $dark-gray;
+	line-height: normal;
+}
+
+.stm-teacher-bio_trainer {
+	.stm-teacher-bio__content {
+		@include clearfix();
+	}
+	
+	.stm-teacher-bio__data {
+		float: left;
+		width: 160px;
+	}
+
+	.stm-teacher-bio__text {
+		padding-left: 30px;
+		overflow: hidden;
+	}
+}

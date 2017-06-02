@@ -1,0 +1,19 @@
+.stm-single-image-wrapper {
+	@include clearfix();
+}
+
+.stm-single-image_right {
+	.stm-single-image {
+		float: right;
+	}
+}
+
+.stm-single-image_center {
+	text-align: center;
+}
+
+.stm-single-image_responsive img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

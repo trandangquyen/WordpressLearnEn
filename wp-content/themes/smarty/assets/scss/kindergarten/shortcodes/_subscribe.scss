@@ -1,0 +1,102 @@
+// Subscribe - Modal
+.subscribe-modal-launcher {
+	position: relative;
+	z-index: 2;
+
+	.fa {
+		margin-right: 6px;
+	}
+}
+
+.subscribe-modal-launcher_right {
+	text-align: right;
+}
+
+.subscribe-modal-launcher_center {
+	text-align: center;
+}
+
+.modal_subscribe {
+	top: 50%;
+	transform: translateY(-50%);
+	.modal-content {
+		border-radius: 0;
+		box-shadow: none;
+		border: none;
+	}
+
+	.modal-header {
+		position: relative;
+		padding: 23px 50px;
+		background: $green;
+		border: none;
+
+		.close {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			right: 30px;
+			font-size: 16px;
+			opacity: 1;
+			color: rgba( $white, .75 );
+			@include transition();
+
+			&:focus,
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+
+	.modal-title {
+		color: $white;
+
+		.fa {
+			margin-right: 15px;
+		}
+	}
+
+	.modal-body {
+		padding: 46px 50px;
+
+		.mc4wp-form-fields {
+			@include clearfix();
+		}
+
+		input[type="email"] {
+			float: left;
+			color: $dark-blue;
+			border: 1px solid #e5e5e5;
+			padding: 13px 20px;
+			box-shadow: none;
+			line-height: 22px;
+			vertical-align: top;
+			width: calc( 100% - 115px );
+		}
+
+		input[type="submit"] {
+			float: left;
+			width: 95px;
+			margin-left: 20px;
+			height: 50px;
+			padding: 0 15px;
+			background: transparent;
+			border: 2px solid $blue;
+			color: $dark-blue;
+			vertical-align: middle;
+			@include transition();
+
+			&:hover {
+				background: $blue;
+				color: $white;
+			}
+
+			&:active {
+				border-color: #007fbf;
+				background: #007fbf;
+				color: $white;
+			}
+		}
+	}
+}

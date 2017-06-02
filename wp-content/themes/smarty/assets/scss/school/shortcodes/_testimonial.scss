@@ -1,0 +1,145 @@
+.stm-carousel_type_testimonials {
+	.stm-testimonial {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		@include transition(opacity);
+		transform: translateZ(0);
+	}
+
+	&.owl-loaded {
+		.stm-testimonial {
+			position: relative;
+			opacity: 1;
+		}
+	}
+
+	.owl-controls {
+		padding-top: 40px;
+
+		.owl-dots {
+			text-align: left;
+			padding-left: 178px;
+		}
+	}
+
+	&.stm-carousel_dots_gray {
+		.owl-controls .owl-dot {
+			span {
+				background: rgba( $black, .25 );
+			}
+
+			&.active span {
+				background: $green;
+			}
+		}
+	}
+}
+
+.stm-testimonial__avatar {
+	padding-top: 13px;
+	img {
+		display: block;
+		height: auto !important;
+		width: auto !important;
+		border-radius: 50%;
+	}
+}
+
+// Style 1
+.stm-testimonial_style_1 {
+	.stm-testimonial__avatar {
+		display: table-cell;
+		width: 1%;
+		vertical-align: top;
+	}
+
+	.stm-testimonial__content {
+		display: table-cell;
+		padding-left: 45px;
+		vertical-align: top;
+	}
+
+	.stm-testimonial__text {
+		margin-bottom: 20px;
+
+		p {
+			&:after,
+			&:before {
+				@include theme-icon;
+				font-size: 18px;
+				color: $green;
+			}
+
+			&:before {
+				content: "\e90d";
+				position: relative;
+				left: -29px;
+				top: -10px;
+				text-indent: 0;
+			}
+
+			&:after {
+				content: "\e90c";
+				position: relative;
+				left: 25px;
+				top: -13px;
+			}
+
+			text-indent: 30px;
+			color: $white;
+			font: {
+				size: 24px;
+				weight: 300;
+			}
+			line-height: 42px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.stm-testimonial__author {
+		strong,
+		b {
+			color: $white;
+		}
+		color: rgba( $white, .7 );
+	}
+
+	&.stm-testimonial_color_dark-blue {
+		.stm-testimonial__text p,
+		.stm-testimonial__text {
+			color: $dark-blue;
+		}
+
+		.stm-testimonial__author b,
+		.stm-testimonial__author strong,
+		.stm-testimonial__author {
+			color: $dark-gray;
+		}
+	}
+}
+
+.stm-blockquote__content {
+	display: table;
+}
+
+.stm-blockquote__avatar {
+	display: table-cell;
+}
+
+.stm-blockquote__body {
+	display: table-cell;
+	width: 10000px;
+	vertical-align: middle;
+}
+
+.stm-blockquote_avatar_left {
+	.stm-blockquote__body {
+		padding-left: 65px;
+	}
+}
+

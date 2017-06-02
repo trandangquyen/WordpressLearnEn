@@ -1,0 +1,44 @@
+.error404,
+.page-template-404 {
+  height: 100%;
+
+  #wrapper {
+    height: 100%;
+  }
+
+  .content {
+    height: 100%;
+    padding: 50px 0 0;
+    background-image: url("../../img/tmp/bg-404un.jpg");
+    background-color: $black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .top-bar,
+  header,
+  .footer {
+    display: none;
+  }
+}
+
+.error-404 {
+  margin-bottom: 110px;
+  font-size: 15px;
+  color: $white;
+
+  .logo {
+    margin-bottom: 250px;
+  }
+
+  h2 {
+    line-height: 54px;
+    margin-bottom: 24px;
+    color: $white;
+  }
+
+  .stm-separator {
+    margin-bottom: 0;
+  }
+}

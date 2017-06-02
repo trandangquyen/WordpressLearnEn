@@ -1,0 +1,44 @@
+.footer {
+	padding: {
+		bottom: 29px;
+	}
+
+	.copyright {
+		text-align: center;
+		font-size: 13px;
+		color: $gray;
+
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+
+.widget_footer.widget_nav_menu .menu > li > a {
+  &:before {
+    display: block !important;
+  }
+}
+
+// Default
+.footer_type_default {
+	background: $dark-blue;
+}
+
+// Compact
+.footer_compact {
+	padding-top: 29px;
+}
+
+// Widget Area
+.widget-area_type_footer {
+	border-bottom: 1px solid rgba($white, .25);
+	margin-bottom: 27px;
+	padding: {
+		top: 46px;
+		bottom: 46px;
+	}
+}
+

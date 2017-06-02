@@ -1,0 +1,416 @@
+// Donation Info
+.donation-info {
+  padding: 28px 30px 24px 30px;
+  margin-bottom: 43px;
+  background: $white;
+  border: 2px solid $green;
+}
+
+.donation-info__heading {
+  margin-bottom: 14px;
+  @include clearfix()
+}
+
+.donation-info__donated {
+  float: left;
+  font: {
+    size: 13px;
+    weight: 700;
+  }
+  color: $gray;
+  text-transform: uppercase;
+}
+
+.donation-info__time {
+  float: right;
+  font: {
+    size: 14px;
+  }
+  color: $light-gray;
+}
+
+.donation-info__progress {
+  height: 4px;
+  background: #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.donation-info__progress-bar {
+  position: relative;
+  height: 4px;
+  background: $green;
+
+  &:before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    position: absolute;
+    right: -4px; top: 50%;
+    transform: translateY(-50%);
+    background: $blue;
+  }
+}
+
+.donation-info__footer {
+  display: table;
+  width: 100%;
+}
+
+.donation-info__footer-col {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.donation-info__footer-col_large {
+  width: 100%;
+}
+
+.donation-info__stats {
+  @include clearfix()
+}
+
+.donation-info__stats-item {
+  float: left;
+  width: 25%;
+}
+
+.donation-info__stats-val {
+  font-size: 18px;
+  line-height: 22px;
+  color: $blue;
+}
+
+.donation-info__stats-label {
+  font-size: 13px;
+  line-height: 22px;
+  color: $dark-gray;
+}
+
+.donation-info__action {
+  white-space: nowrap;
+
+  .stm-btn {
+    min-width: 180px;
+  }
+}
+
+// Donation Grid
+.stm-donation_view_grid {
+  margin-bottom: 65px;
+
+  .vc_tta-panel-body & {
+    margin-bottom: 25px;
+  }
+
+  .stm-donation__thumbnail {
+    position: relative;
+    z-index: 1;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .stm-donation__body {
+    padding: 0 30px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stm-donation__content {
+    background: $white;
+    padding: 31px 30px 0 30px;
+  }
+
+  .stm-donation__title {
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    line-height: 30px;
+    a {
+      color: inherit;
+      @include transition();
+
+      &:hover {
+        color: $blue;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .stm-donation__donated {
+    margin-bottom: 10px;
+    font: {
+      size: 13px;
+      weight: 700;
+    }
+    color: $gray;
+    text-transform: uppercase;
+    line-height: 30px;
+  }
+
+  .stm-donation__progress {
+    height: 4px;
+    margin-bottom: 17px;
+    background: #f0f0f0;
+  }
+
+  .stm-donation__progress-bar {
+    height: 4px;
+    background: $green;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: -4px; top: 50%;
+      height: 16px;
+      width: 4px;
+      transform: translateY(-50%);
+      background: $blue;
+    }
+  }
+
+  .stm-donation__time {
+    font-size: 14px;
+    line-height: 30px;
+    color: $light-gray;
+  }
+
+  .stm-donation__action {
+    transform: translateY(50%);
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $white;
+      z-index: 1;
+    }
+
+    .stm-btn {
+      display: block;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+// Single Donation
+.post_view_single {
+  &.stm_donation {
+    .entry-title {
+      margin-bottom: 37px;
+    }
+
+    .entry-footer {
+      margin-bottom: 30px;
+
+      .entry-share {
+        float: none;
+      }
+    }
+  }
+}
+
+// Donation Modal
+.modal_donation {
+  .modal-dialog {
+    width: 640px;
+  }
+
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .modal-header {
+    position: relative;
+    padding: 33px 50px 27.7px 50px;
+    border: none;
+    min-height: 0;
+    background: $green;
+
+    .close {
+      position: absolute;
+      top: 21px; right: 27px;
+      margin: 0;
+      font: {
+        weight: 300;
+        size: 28px;
+      }
+      color: $white;
+      opacity: .75;
+      @include transition();
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .modal-title {
+    margin: 0;
+    color: $white;
+
+    small {
+      display: block;
+      margin-bottom: 8px;
+      color: inherit;
+    }
+  }
+
+  .modal-body {
+    padding: 0 50px 50px;
+  }
+}
+
+.form_donation {
+  .form__amount {
+    padding: 46px 0 36px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eeeeee;
+    @include clearfix()
+  }
+
+  .form__amount-title {
+    float: left;
+    width: 29.368029739777%;
+    padding-right: 15px;
+    margin-top: -7px;
+    line-height: 26px;
+    color: $dark-gray;
+  }
+
+  .form__amount-values {
+    float: left;
+    width: 380px;
+    font-size: 0;
+  }
+
+  .form__amount-value {
+    display: none;
+  }
+
+  .form__amount-label {
+    height: 40px;
+    min-width: 60px;
+    margin: 0 10px 0 0;
+    border: 2px solid $blue;
+    line-height: 36px;
+    font-size: 13px;
+    color: $dark-blue;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    @include transition();
+
+    &:hover,
+    &.active {
+      background: $blue;
+      color: $white;
+    }
+  }
+
+  .form__amount-value-custom {
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #e6e6e6;
+    vertical-align: top;
+    font-size: 16px;
+    color: $dark-blue;
+    @include transition();
+
+    &:focus {
+      border-color: $green;
+    }
+  }
+
+  .form__fields {
+    input[type="text"],
+    textarea {
+      margin-bottom: 30px;
+      border: 1px solid #b2b2b2;
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 16px;
+      color: $dark-blue;
+      @include transition();
+
+      &:focus {
+        border-color: $green;
+      }
+    }
+
+    input[type="text"] {
+      height: 50px;
+      padding: 0 20px;
+
+      &.error {
+        border-color: $error;
+      }
+    }
+
+    textarea {
+      height: 130px;
+      padding: 13px 20px;
+      line-height: 22px;
+      resize: none;
+    }
+  }
+
+  .form__item {
+    position: relative;
+
+    .form-error {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+      font-size: 13px;
+      color: $error;
+      visibility: hidden;
+      opacity: 0;
+      @include transition(opacity);
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .form__action {
+    margin: 0;
+
+    .stm-btn {
+      width: 100%;
+      max-width: 215px;
+      vertical-align: middle;
+    }
+  }
+
+  .form__action-loading {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    visibility: hidden;
+    opacity: 0;
+    @include transition();
+  }
+
+  .form__action-loading_state_loading {
+    visibility: visible;
+    opacity: 1;
+  }
+}

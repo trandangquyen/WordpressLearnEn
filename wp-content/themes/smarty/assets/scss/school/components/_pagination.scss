@@ -1,0 +1,67 @@
+.pagination {
+  margin: 0;
+  font-size: 0;
+
+  .page-numbers {
+    margin-right: 5px;
+    display: inline-block;
+    border: 2px solid transparent;
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    color: $dark-blue;
+    @include transition();
+
+    &:hover {
+      border-color: $blue;
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.current {
+      border-color: $green;
+    }
+
+    &.next,
+    &.prev {
+      font-family: Arial, Tahoma, sans-serif;
+    }
+  }
+}
+
+.home .breadcrumbs {
+  margin-bottom: -110px;
+}
+
+.home.blog .breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.breadcrumbs {
+  padding-top: 190px;
+  margin-bottom: 40px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #a6a6a6;
+
+  a {
+    color: #a6a6a6;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+
+  span {
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

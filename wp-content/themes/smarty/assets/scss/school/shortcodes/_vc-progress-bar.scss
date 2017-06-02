@@ -1,0 +1,83 @@
+.wpb_wrapper .vc_progress-bar_view_large {
+  .vc_label {
+    position: relative;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 11px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $dark-blue;
+
+    &:before {
+      content: "\f105";
+      @include fa-icon();
+      margin-right: 14px;
+      font-size: 14px;
+      color: $green;
+    }
+  }
+
+  .vc_general.vc_single_bar {
+    margin-bottom: 4px;
+    height: 30px;
+    background: $white;
+    border-radius: 30px;
+
+    .vc_bar {
+      border-radius: 30px;
+    }
+
+    &.vc_progress-bar-color-bar_blue {
+      .vc_bar {
+        background: $blue;
+      }
+
+      .vc_bar_val {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.wpb_wrapper .vc_progress-bar_view_compact {
+  .vc_bar_heading {
+    margin-bottom: 2px;
+    @include clearfix();
+
+    .vc_label {
+      float: left;
+      font-size: 11px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $dark-blue;
+    }
+
+    .vc_bar_val {
+      float: right;
+      font-size: 12px;
+      line-height: 24px;
+      color: $gray;
+
+      &:after {
+        content: "\f107";
+        @include fa-icon();
+        margin-left: 7px;
+        font-size: 14px;
+        color: $blue;
+      }
+    }
+  }
+
+  .vc_general.vc_single_bar {
+    height: 6px;
+    margin-bottom: 28px;
+    border-radius: 6px;
+    box-shadow: none;
+    background: #e6e6e6;
+  }
+}

@@ -1,0 +1,50 @@
+.tt_tabs_navigation li {
+	margin: 0 !important;
+	font-size: 18px !important;
+
+	a {
+		border: 2px solid transparent !important;
+        margin-bottom: 0 !important;
+		padding: 0 46px !important;
+		line-height: 36px !important;
+        font-size: 18px !important;
+        font-family: Dosis !important;
+        font-weight: 600 !important;
+		color: $lilac !important;
+
+		&:hover {
+			color: $pink !important;
+            line-height: 36px !important;
+			border: 2px solid transparent !important;
+			padding-bottom: 0 !important;
+		}
+	}
+
+	a.selected,
+	&.ui-tabs-active a {
+        border-radius: 30px;
+        background-color: $pink;
+		border: 2px solid $pink !important;
+		padding-bottom: 0 !important;
+        color: $white !important;
+
+		&:hover {
+			color: $white !important;
+		}
+	}
+}
+
+.tt_timetable th {
+	background: #f0f0f0;
+}
+
+.tt_tabs_navigation {
+    background-color: $yellow !important;
+    padding: 10px;
+    border-radius: 20px;
+	margin-bottom: 40px;
+}
+
+table.tt_timetable {
+	background: transparent !important;
+}

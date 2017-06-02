@@ -1,0 +1,55 @@
+.pagination {
+  margin: 0;
+  font-size: 0;
+
+  .page-numbers {
+    margin-right: 5px;
+    display: inline-block;
+    border: 2px solid transparent;
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    border-radius: 3px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: $dark-blue;
+    @include transition();
+
+    &:hover {
+      border-color: $dark-blue;
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.current {
+      border-color: $dark-red;
+    }
+
+    &.next,
+    &.prev {
+      font-family: Arial, Tahoma, sans-serif;
+    }
+  }
+
+  .prev.page-numbers,
+  .next.page-numbers {
+    font-size: 0;
+  }
+
+  .prev.page-numbers:after {
+    content: "\f053";
+    font-family: 'FontAwesome';
+    font-size: 12px;
+  }
+
+  .next.page-numbers:after {
+    content: "\f054";
+    font-family: 'FontAwesome';
+    font-size: 12px;
+  }
+}

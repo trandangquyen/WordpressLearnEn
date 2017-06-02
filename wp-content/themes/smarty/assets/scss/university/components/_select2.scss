@@ -1,0 +1,131 @@
+.select2-container,
+.select2-container--default {
+	width: 100% !important;
+
+	.select2-choice,
+	.select2-selection--single {
+		height: 50px;
+		border: 1px solid #e6e6e6;
+		border-radius: 5px;
+		padding: 0;
+
+		.select2-chosen,
+		.select2-selection__rendered {
+			line-height: 50px;
+            font-family: 'Work Sans', sans-serif;
+            color: $light-gray;
+            font-size: 14px;
+            padding-left: 20px;
+		}
+
+		.select2-arrow,
+		.select2-selection__arrow {
+			height: 48px;
+			width: 50px;
+
+			b {
+                border: 0 !important;
+				border-width: 0;
+                position: relative;
+				margin-left: -5px;
+
+                &:after {
+                    content: "\f107";
+                    font-family: 'FontAwesome';
+                    display: inline-block;
+                    vertical-align: top;
+                    border: 0;
+                    margin-top: -8px;
+                    font-size: 16px;
+                    color: $dark-blue;
+                }
+			}
+		}
+	}
+
+	.select2-results__option[aria-selected=true] {
+		background-color: transparent;
+	}
+
+	.select2-highlighted,
+	.select2-results__option--highlighted[aria-selected] {
+		background-color: $dark-blue;
+	}
+}
+
+.select2-container {
+	.select2-choice {
+		.select2-arrow {
+			b {
+                border: 0;
+				margin-left: 0;
+
+			}
+		}
+
+		> .select2-chosen {
+			margin-right: 0;
+		}
+	}
+}
+
+.select2-container--open {
+  b {
+    &:after {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	border-radius: 0;
+	border: 1px solid #e6e6e6;
+}
+
+.select2-results__option {
+	padding: 9px 20px;
+	line-height: 24px;
+    font-size: 14px !important;
+	@include transition();
+}
+
+.select2-drop,
+.select2-dropdown {
+	border-radius: 0;
+	border: 1px solid #e6e6e6;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+	border-top: 1px solid #e6e6e6;
+}
+
+.select2-results {
+	padding: 0;
+	background: #fff;
+
+    li {
+      font-family: 'Work Sans';
+      font-size: 14px;
+    }
+
+	.select2-result {
+		margin: 0;
+		@include transition();
+	}
+
+	.select2-highlighted {
+		border-radius: 0;
+		color: $white;
+		background-color: $dark-blue;
+	}
+
+	.select2-result-label {
+		padding: 9px 20px;
+		line-height: 24px;
+	}
+}

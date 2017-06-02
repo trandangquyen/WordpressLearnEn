@@ -1,0 +1,23 @@
+.content {
+  min-height: 520px;
+  padding: {
+    bottom: 100px;
+  }
+
+  .single-stm_course &,
+  .single-stm_teacher & {
+    padding: 0;
+  }
+}
+
+.content_type_vc {
+  padding: 0;
+}
+
+.vc_row[data-vc-full-width] {
+  overflow: visible !important;
+
+  &.vc_parallax {
+    overflow: hidden !important;
+  }
+}

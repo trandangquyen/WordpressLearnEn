@@ -1,0 +1,252 @@
+.stm-teacher_view_grid-item {
+	margin-bottom: 40px;
+}
+
+.stm-teacher__info {
+	padding: 0 30px;
+}
+
+.stm-teacher__info-content {
+	position: relative;
+	background: $white;
+	overflow: hidden;
+	padding: 27.5px 30px;
+	border-bottom: 4px solid $green;
+	margin-top: -53.5px;
+	@include transition();
+}
+
+.stm-teacher__photo {
+	img {
+		display: block;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.stm-teacher__name {
+	margin-bottom: 3px;
+	font-size: 18px;
+	color: $dark-blue;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@include transition();
+}
+
+.stm-teacher__position {
+	font-size: 14px;
+	color: $dark-gray;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@include transition();
+}
+
+.stm-teacher__socials {
+	position: absolute;
+	top: 50%;
+	transform: translateY(60px);
+	opacity: 0;
+	@include transition();
+}
+
+.stm-teacher {
+	&:hover {
+		.stm-teacher__info-content {
+			background: $green;
+		}
+
+		.stm-teacher__name {
+			transform: translateY(-50px);
+			opacity: 0;
+		}
+
+		.stm-teacher__position {
+			transform: translateY(-50px);
+			opacity: 0;
+		}
+
+		.stm-teacher__socials {
+			transform: translateY(-50%);
+			opacity: 1;
+		}
+	}
+}
+
+.stm-staff-table {
+	width: 100%;
+	font-size: 14px;
+
+	th {
+		background: $green;
+		padding: 8px 15px;
+		text-transform: uppercase;
+		line-height: 24px;
+		color: $white;
+	}
+
+	td {
+		background: $white;
+		padding: 13px 15px;
+		border-bottom: 1px solid rgba($black, .15);
+		line-height: 24px;
+		color: $dark-gray;
+	}
+}
+
+// Teacher - Contact details
+.stm-contact-details_type_teacher {
+	.stm-contact-details__items {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	.stm-contact-details__item {
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 26px;
+		line-height: 24px;
+		color: $dark-gray;
+
+		a {
+			color: $dark-blue;
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:before {
+			@include theme-icon;
+			position: absolute;
+			top: 5px; left: 0;
+			color: $green;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.stm-contact-details__item_type_address {
+		&:before {
+			content: "\e905";
+		}
+	}
+
+	.stm-contact-details__item_type_tel {
+		&:before {
+			content: "\e904";
+		}
+	}
+
+	.stm-contact-details__item_type_skype {
+		&:before {
+			content: "\e912";
+		}
+	}
+
+	.stm-contact-details__item_type_url {
+		&:before {
+			content: "\e911";
+		}
+	}
+
+	.stm-contact-details__item_type_email {
+		&:before {
+			content: "\e902";
+		}
+	}
+
+	.stm-contact-details__item_type_fax {
+		&:before {
+			content: "\e903";
+		}
+	}
+
+	.socials-list_type_teacher {
+		padding-top: 18px;
+
+		.socials-list__item-link {
+			opacity: 0.7;
+		}
+	}
+}
+
+.socials-list_type_teacher {
+	font-size: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+
+	.socials-list__item {
+		display: inline-block;
+        margin-top: 4px;
+        margin-right: 8px;
+		margin-bottom: 4px;
+		font-size: 18px;
+		vertical-align: middle;
+
+		.socials-list__item-link {
+			position: relative;
+			display: block;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 32px;
+			color: $white;
+			@include transition();
+
+			span {
+				display: inline-block;
+			}
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.socials-list__item-link_type_facebook {
+			background: #3a5897;
+		}
+
+		.socials-list__item-link_type_twitter {
+			background: #00aced;
+		}
+
+		.socials-list__item-link_type_google-plus {
+			background: #db4437;
+			font-size: 16px;
+		}
+
+		.socials-list__item-link_type_instagram {
+			background: #ac907a;
+			font-size: 16px;
+		}
+
+		.socials-list__item-link_type_envelope {
+			background: #ffc600;
+			padding-top: 1px;
+			font-size: 12px;
+		}
+
+		.socials-list__item-link_type_youtube {
+			background: #bb0000;
+			font-size: 14px;
+		}
+
+		.socials-list__item-link_type_soundcloud {
+			background: #ff3a00;
+			font-size: 14px;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.stm-images-carousel_achievement {
+  .owl-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+
+  .owl-dots .owl-dot {
+    span {
+      background: rgba($black, .25);
+    }
+
+    &:hover,
+    &.active {
+      span {
+        background: $green;
+      }
+    }
+  }
+
+  .stm-images-carousel__item {
+    transform: translateZ(0);
+  }
+}
+
+.stm-image_style-1 {
+  .stm-image__content {
+    padding: 30px;
+    background: $white;
+    border: 12px solid ;
+    border-image-source: url('../../img/wood-frame2.jpg');
+    border-image-slice: 24;
+  }
+
+  .stm-image__link {
+    display: block;
+    border: 1px solid rgba( $black, .25 );
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &:after {
+    content: '';
+    background: url('../../img/short-large-bottom-shadow.png') no-repeat center;
+    width: 100%;
+    height: 68px;
+    display: block;
+  }
+}
+
+.stm-image_achievement {
+  display: inline-block;
+}

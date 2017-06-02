@@ -1,0 +1,224 @@
+.stm-pricing__content {
+	@include clearfix();
+}
+
+.stm-pricing__side-panel {
+	float: left;
+	width: 31.531531531532%;
+	padding-top: 50px;
+}
+
+.stm-pricing__filters {
+    margin-top: 10px;
+	margin-bottom: 81px;
+	@include clearfix();
+
+	ul {
+		position: relative;
+		float: left;
+        overflow: hidden;
+		padding-left: 0;
+		margin-bottom: 0;
+        border-radius: 35px;
+		border: 2px solid $yellow;
+		list-style: none;
+		@include clearfix();
+	}
+
+	li {
+		float: left;
+		text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+	.stm-pricing__filter_fluid-hover {
+		position: absolute;
+		background: $yellow;
+		top: 0; left: 0;
+		height: 100%;
+		z-index: -1;
+		@include transition(left);
+	}
+
+	a {
+		display: block;
+		line-height: 30px;
+		padding: 3px 30px;
+		color: $lilac;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.stm-pricing__filter_active {
+		a {
+			color: $lilac;
+		}
+	}
+}
+
+.stm-pricing__features {
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+
+	li {
+		padding: 14.5px 20px;
+		background: $white;
+		font: {
+			size: 18px;
+			weight: 400;
+		}
+		line-height: 30px;
+		color: $dark-gray;
+
+		&:not(:first-child) {
+			border-top: 1px solid rgba( $dark-gray, .1 );
+		}
+
+        &:last-child {
+          border-bottom: 1px solid rgba( $dark-gray, .1 );
+        }
+	}
+}
+
+.stm-pricing__tables {
+	float: left;
+	width: 68.468468468468%;
+}
+
+.stm-pricing__tables-row {
+	display: table;
+	width: 100%;
+}
+
+.stm-pricing__tables-col {
+	display: table-cell;
+	vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &.stm-pricing__tables-col_featured {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+}
+
+.stm-pricing_three {
+	.stm-pricing__tables-col {
+		width: 33.33%;
+	}
+}
+
+.stm-pricing-table {
+	padding-top: 21px;
+	background: $white;
+	border-top: 4px solid $pink;
+	text-align: center;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.stm-pricing-table__title {
+	margin-bottom: 24px;
+	font-size: 24px;
+	line-height: 30px;
+    font-weight: 500;
+	color: $lilac;
+}
+
+.stm-pricing-table__periods {
+	position: relative;
+	padding: 0 0 28px;
+	margin-bottom: 0;
+	list-style: none;
+	border-bottom: 1px solid rgba( $dark-gray, .1 );
+}
+
+.stm-pricing-table__periods-item {
+	display: none;
+	@include transition(opacity);
+}
+
+.stm-pricing-table__periods-item_active {
+	display: block;
+}
+
+.stm-pricing-table__price {
+	margin-bottom: 9px;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 60px;
+	line-height: 30px;
+	color: $pink;
+}
+
+.stm-pricing-table__period {
+	font-size: 16px;
+	line-height: 24px;
+    letter-spacing: -0.20px;
+	color: #595959;
+}
+
+.stm-pricing-table__features {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.stm-pricing-table__feature {
+	padding: 14.5px 15px;
+	border-bottom: 1px solid rgba( $dark-gray, .1 );
+	line-height: 30px;
+
+	.stm-icon-check {
+		color: $green;
+	}
+
+	.stm-icon-times {
+		color: $light-gray;
+	}
+}
+
+.stm-pricing-table__feature-label {
+	display: none;
+	font: {
+		size: 14px;
+		weight: 700;
+	}
+	color: $dark-gray;
+	line-height: normal;
+}
+
+.stm-pricing-table__action {
+	padding: 25px;
+	> a {
+		display: block;
+        color: $lilac;
+
+        &:hover {
+          opacity: 0.7;
+        }
+	}
+
+  .stm-btn_md {
+    max-width: 172px;
+    min-width: 100px;
+    margin: 0 auto;
+    padding: 0 10px 4px !important;
+  }
+}
+
+.stm-pricing-table_featured {
+	position: relative;
+	padding-top: 31px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+	.stm-pricing-table__action {
+		padding: {
+			top: 30px;
+			bottom: 30px;
+		}
+	}
+}

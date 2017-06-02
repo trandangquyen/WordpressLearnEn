@@ -1,0 +1,94 @@
+.stm-menu_tab {
+	margin-bottom: 35px;
+}
+
+.stm-meal-list__heading {
+	margin-bottom: 36px;
+
+	h4 {
+		overflow: hidden;
+		text-align: center;
+		margin-bottom: 0;
+
+		&:before,
+		&:after {
+			content: "";
+			width: 100%;
+			display: inline-block;
+			border-bottom: 1px solid $green;
+			vertical-align: middle;
+			margin-top: -1px;
+		}
+
+		&:before {
+			margin: {
+				left: -100%;
+				right: 20px;
+			}
+		}
+
+		&:after {
+			margin: {
+				right: -100%;
+				left: 20px;
+			}
+		}
+
+	}
+}
+
+.stm-meal {
+	&.animated {
+		animation-duration: .5s;
+	}
+
+	&.has-post-thumbnail {
+		@include clearfix();
+
+		.stm-meal__thumbnail {
+			float: left;
+		}
+
+		.stm-meal__body {
+			padding-left: 20px;
+			overflow: hidden;
+		}
+	}
+}
+
+.stm-meal__title {
+	margin: {
+		top: -3px;
+		bottom: 7px;
+	}
+	font: {
+		size: 16px;
+		weight: 700;
+	}
+	line-height: 20px;
+	color: $dark-blue;
+}
+
+.stm-metal__summary {
+	font-size: 13px;
+	line-height: 22px;
+	color: $light-gray;
+}
+
+.stm-meal-list__list  {
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+
+	> li {
+		margin-bottom: 33px;
+	}
+}
+
+.stm-tab__pane-action_deal {
+	text-align: center;
+
+	.stm-btn {
+		vertical-align: middle;
+	}
+}

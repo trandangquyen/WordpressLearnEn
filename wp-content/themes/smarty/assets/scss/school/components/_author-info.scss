@@ -1,0 +1,48 @@
+.author-info {
+  background: $white;
+  padding: 20px;
+  @include clearfix();
+}
+
+.author-info__avatar {
+  float: left;
+}
+
+.author-info__content {
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.author-info__heading {
+  margin-bottom: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  line-height: 1;
+}
+
+.author-info__title {
+  margin-bottom: 9px;
+  font: {
+    size: 15px;
+    weight: 700;
+  }
+  color: $dark-blue;
+}
+
+.author-info__link {
+  color: inherit;
+}
+
+.author-info__title {
+  &:hover {
+    .author-info__link {
+      text-decoration: none;
+    }
+  }
+}
+
+.author-info__bio {
+  font-size: 14px;
+  line-height: 24px;
+}

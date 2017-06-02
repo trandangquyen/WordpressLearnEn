@@ -1,0 +1,54 @@
+.stm-blockquote {
+  padding: 0;
+  border-left: 0;
+
+  p {
+    &:first-of-type {
+      &:before {
+        content: "\e90d";
+        position: relative;
+        left: -19px;
+        top: -7px;
+        text-indent: 0;
+        @include theme-icon;
+        font-size: 18px;
+        color: $green;
+      }
+      text-indent: 20px;
+    }
+
+    &:last-of-type {
+      &:after {
+        content: "\e90c" !important;
+        position: relative;
+        left: 18px;
+        top: -2px;
+        @include theme-icon;
+        font-size: 18px;
+        color: $green;
+      }
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    padding-top: 36px;
+    color: $dark-gray;
+
+    cite {
+      font-style: normal;
+    }
+  }
+}
+
+.stm-blockquote_bordered {
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: $green;
+  padding: {
+    top: 35.5px;
+    bottom: 33px;
+    left: 0;
+    right: 0;
+  }
+}

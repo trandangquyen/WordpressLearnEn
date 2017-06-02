@@ -1,0 +1,30 @@
+.wpb_wrapper .vc_pie_chart {
+  .vc_pie_chart_back {
+    border-color: #e6e6e6 !important;
+    opacity: 1;
+  }
+
+  .vc_pie_chart_group {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .vc_pie_chart_value {
+    font-size: 36px;
+    line-height: 24px !important;
+    color: $dark-blue;
+    position: static;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .vc_pie_chart_label {
+    margin-top: 13px;
+    font-size: 13px;
+    line-height: normal;
+    color: $dark-gray;
+  }
+}

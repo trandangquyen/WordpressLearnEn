@@ -1,0 +1,84 @@
+.stm-blockquote {
+  padding: 35px;
+  border-left: 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    text-indent: 0;
+    @include theme-icon;
+    font-size: 18px;
+    background-color: $dark-red;
+  }
+
+  p {
+    position: relative;
+    line-height: 36px;
+    padding-bottom: 29px;
+
+    &:last-of-type {
+      &:before {
+        content: "";
+        position: absolute;
+        left: -35px;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #dcdcdc;
+      }
+    }
+
+    &:last-of-type {
+      &:after {
+        content: "\e931" !important;
+        position: absolute;
+        right: -35px;
+        bottom: -19px;
+        line-height: 20px;
+        @include theme-icon;
+        font-size: 40px;
+        color: #dcdcdc;
+      }
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    padding-top: 30px;
+    color: $dark-gray;
+
+    cite {
+      font-style: italic;
+      font-size: 14px;
+      color: $gray;
+
+      strong {
+        display: block;
+        font-style: normal;
+        margin-bottom: 2px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 13px;
+        color: $black;
+      }
+    }
+  }
+}
+
+.stm-blockquote_bordered {
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: $green;
+  padding: {
+    top: 35.5px;
+    bottom: 33px;
+    left: 0;
+    right: 0;
+  }
+}

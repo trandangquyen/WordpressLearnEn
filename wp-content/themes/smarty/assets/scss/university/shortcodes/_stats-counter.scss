@@ -1,0 +1,51 @@
+.stm-stats_counter {
+	&.stm-stats_icon_left {
+		.stm-stats__icon {
+			float: left;
+			font-size: 67px;
+			color: $green;
+		}
+
+		.stm-stats__content {
+			overflow: hidden;
+			padding-left: 18px;
+		}
+
+        .stm-stats__content.center {
+          overflow: visible;
+          padding-left: 0;
+        }
+	}
+
+	.stm-stats__value {
+		margin: {
+			top: -6px;
+			bottom: 2px;
+		}
+		text-indent: -4px;
+		color: $white;
+		font: {
+			size: 42px;
+			weight: 300;
+		}
+	}
+
+	.stats__value-number {
+		line-height: 1;
+	}
+
+    .stm-stats__title {
+      margin-bottom: 12px;
+    }
+
+	.stm-stats__descr {
+        padding: 0 25px;
+		line-height: 20px;
+        font-weight: 400;
+		color: $white;
+	}
+}
+
+.stm-stats__icon svg path {
+	stroke: inherit !important;
+}

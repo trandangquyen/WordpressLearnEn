@@ -1,0 +1,274 @@
+.stm-teacher_view_grid-item {
+	margin-bottom: 40px;
+}
+
+.stm-teacher__info-content {
+	position: relative;
+	background: $white;
+	overflow: hidden;
+	padding: 18.5px 26px;
+	@include transition();
+}
+
+.stm-teacher__info {
+  background-color: $white;
+}
+
+.stm-teacher__photo {
+    background-color: $white;
+
+	img {
+		display: block;
+		height: auto;
+		max-width: 100%;
+        margin: 0 auto;
+	}
+}
+
+.stm-teacher__name {
+	padding-bottom: 3px;
+	font-size: 18px;
+	color: $black;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@include transition();
+}
+
+.stm-teacher__position {
+	font-size: 11px;
+	color: $dark-red;
+	white-space: nowrap;
+	overflow: hidden;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+	text-overflow: ellipsis;
+	@include transition();
+}
+
+.stm-teacher__socials {
+	position: absolute;
+	bottom: 24px;
+	opacity: 0;
+    padding: 0 26px;
+	@include transition();
+}
+
+.stm-teacher {
+	&:hover {
+		.stm-teacher__info-content {
+            transform: translateY(-50px);
+		}
+
+		.stm-teacher__socials {
+			opacity: 1;
+		}
+	}
+}
+
+.stm-staff-table {
+	width: 100%;
+	font-size: 14px;
+
+	th {
+		background: $green;
+		padding: 8px 15px;
+		text-transform: uppercase;
+		line-height: 24px;
+		color: $white;
+	}
+
+	td {
+		background: $white;
+		padding: 13px 15px;
+		border-bottom: 1px solid rgba($black, .15);
+		line-height: 24px;
+		color: $dark-gray;
+	}
+}
+
+// Teacher - Contact details
+.stm-contact-details_type_teacher {
+	.stm-contact-details__items {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	.stm-contact-details__item {
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 12px;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 14px;
+		line-height: 24px;
+		color: $dark-gray;
+
+		a {
+			color: $dark-blue;
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:before {
+			@include theme-icon;
+			position: absolute;
+			top: 5px; left: 0;
+            font-size: 16px;
+			color: $dark-red;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.stm-contact-details__item_type_address {
+		&:before {
+			content: "\e92e";
+            font-size: 17px;
+		}
+	}
+
+	.stm-contact-details__item_type_tel {
+        font-size: 14px;
+		&:before {
+			content: "\e904";
+		}
+	}
+
+	.stm-contact-details__item_type_skype {
+		&:before {
+			content: "\e912";
+		}
+	}
+
+	.stm-contact-details__item_type_url {
+		&:before {
+			content: "\e92f";
+		}
+	}
+
+	.stm-contact-details__item_type_email {
+		&:before {
+			content: "\e902";
+		}
+	}
+
+	.stm-contact-details__item_type_fax {
+		&:before {
+			content: "\e903";
+		}
+	}
+
+    .stm-contact-details__item_type_work_schedule {
+      &:before {
+        content: "\e901";
+      }
+    }
+
+    .stm-contact-details__item_type_socials {
+      display: block;
+      padding-left: 0;
+    }
+
+	.socials-list_type_teacher {
+		padding-top: 18px;
+
+		.socials-list__item-link {
+			opacity: 0.7;
+		}
+	}
+}
+
+.socials-list_type_teacher {
+	font-size: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+
+	.socials-list__item {
+		display: inline-block;
+		margin-right: 8px;
+		font-size: 18px;
+		vertical-align: middle;
+
+		.socials-list__item-link {
+			position: relative;
+			display: block;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 32px;
+			color: $white;
+			@include transition();
+
+			span {
+				display: inline-block;
+			}
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.socials-list__item-link_type_facebook {
+			background: #3a5897;
+		}
+
+		.socials-list__item-link_type_twitter {
+			background: #00aced;
+		}
+
+		.socials-list__item-link_type_google-plus {
+			background: #db4437;
+			font-size: 16px;
+		}
+
+		.socials-list__item-link_type_instagram {
+			background: #ac907a;
+			font-size: 16px;
+
+            .stm-icon {
+              font-family: 'FontAwesome' !important;
+              &:before {
+                content: "\f16d";
+              }
+            }
+		}
+
+		.socials-list__item-link_type_envelope {
+			background: #ffc600;
+			padding-top: 1px;
+			font-size: 12px;
+		}
+
+		.socials-list__item-link_type_youtube {
+			background: #bb0000;
+			font-size: 14px;
+
+            .stm-icon {
+              font-family: 'FontAwesome' !important;
+              &:before {
+                content: "\f16a";
+              }
+            }
+		}
+
+		.socials-list__item-link_type_soundcloud {
+			background: #ff3a00;
+			font-size: 14px;
+		}
+	}
+}

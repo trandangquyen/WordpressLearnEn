@@ -1,0 +1,68 @@
+.stm_wp_custom-menu {
+	max-width: 255px;
+	width: 100%;
+
+	.menu {
+		padding: 25px 0;
+        border: 2px solid $yellow;
+        border-radius: 25px;
+		background: $white;
+		list-style: none;
+		margin-bottom: 0;
+	}
+
+	.menu-item {
+		font-size: 14px;
+
+        > h4 {
+          margin-top: -12px;
+          margin-left: 33px;
+          margin-bottom: 7px;
+        }
+
+		> a {
+			position: relative;
+			display: inline-block;
+            vertical-align: top;
+			color: $pink;
+			line-height: 24px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-size: 14px;
+			text-transform: uppercase;
+            padding-left: 20px;
+			margin: 8px 15px 8px 33px;
+
+			&:before {
+                content: "›";
+                font-family: "Times New Roman";
+                position: absolute;
+                left: -3px;
+                top: -1px;
+                color: #56509f;
+			}
+
+			&:hover {
+				text-decoration: none;
+                color: $lilac;
+			}
+
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.current-menu-item {
+		&:hover a,
+		> a {
+			background: rgba($dark-blue, .1);
+			cursor: default;
+
+			&:before {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

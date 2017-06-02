@@ -1,0 +1,28 @@
+.content {
+  min-height: 520px;
+  padding: {
+    top: 60px;
+    bottom: 100px;
+  }
+
+  .single-stm_course &,
+  .single-stm_teacher & {
+    padding: 0;
+  }
+
+  .woocommerce-page & {
+    padding-top: 5px;
+  }
+}
+
+.content_type_vc {
+  padding: 0;
+}
+
+.vc_row[data-vc-full-width] {
+  overflow: visible !important;
+
+  &.vc_parallax {
+    overflow: hidden !important;
+  }
+}

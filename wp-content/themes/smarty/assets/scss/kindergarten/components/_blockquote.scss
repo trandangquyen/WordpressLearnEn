@@ -1,0 +1,70 @@
+.stm-blockquote {
+  padding: 0;
+  border-left: 0;
+
+  p {
+    font-size: 20px;
+    line-height: 34px;
+
+    &:first-of-type {
+      position: relative;
+      padding-left: 64px;
+
+      &:before {
+        content: '“';
+        position: absolute;
+        top: 0;
+        left: -4px;
+        line-height: 153px;
+        font-family: 'Grand Hotel', cursive;
+        font-size: 180px;
+        color: $yellow;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    padding-top: 19px;
+    padding-left: 64px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #404040;
+
+    cite {
+      font-style: normal;
+    }
+  }
+}
+
+.stm-blockquote_bordered {
+  border-top: 4px solid $yellow;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 32px;
+  padding: {
+    top: 18.5px;
+    bottom: 22px;
+    right: 0;
+  }
+
+  p {
+    &:first-of-type {
+      line-height: 34px;
+      text-indent: 0px;
+      padding-left: 49px;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  footer {
+    padding-top: 9px;
+    padding-left: 49px;
+  }
+}

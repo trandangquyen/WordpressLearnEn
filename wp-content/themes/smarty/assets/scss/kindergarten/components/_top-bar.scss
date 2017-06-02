@@ -1,0 +1,931 @@
+.top-bar-vertical-padd {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.top-bar {
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+
+.top-bar__content {
+	position: relative;
+	min-height: 50px;
+}
+
+// Search
+.top-bar__search {
+	.stm-search-form__submit-text {
+		display: none;
+	}
+}
+
+// Language
+.wpml-switcher {
+	position: relative;
+	text-align: left;
+    letter-spacing: 0.20px;
+
+	&__active {
+		position: relative;
+		display: block;
+		padding: 10px 40px 12px 42px;
+		text-decoration: none;
+        font-weight: 400;
+		font-size: 14px;
+
+        &:before {
+          content: "\e952";
+          font-family: 'stm-icon';
+          position: absolute;
+          left: 17px;
+          top: 50%;
+          font-weight: normal;
+          font-size: 16px;
+          margin: -14px 0 0;
+          color: $yellow;
+        }
+
+		&:after {
+			content: "\f107";
+			@include fa-icon();
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			margin: -7px 0 0;
+		}
+	}
+
+	&__list {
+		position: absolute;
+		visibility: hidden;
+		left: 0;
+		top: 100%;
+		min-width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		opacity: 0;
+		@include transition();
+
+		a {
+			display: block;
+			padding: 8px 20px;
+			font-size: 13px;
+			line-height: 20px;
+			text-decoration: none;
+			@include transition();
+		}
+	}
+
+	&__languages {
+		&:hover {
+			.wpml-switcher__list {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&_type_top-bar {
+		float: left;
+	}
+}
+
+// Navigation
+.top-bar__nav {
+	display: inline-block;
+	@extend .top-bar-vertical-padd;
+}
+
+.top-bar__nav-menu {
+	li {
+		line-height: 30px;
+        font-weight: 400;
+        letter-spacing: 0.20px;
+        font-size: 14px;
+	}
+}
+
+// Account
+.top-bar__account {
+	float: right;
+	padding-top: 8px;
+
+    li {
+      padding: 0;
+      font-weight: normal;
+      letter-spacing: 0.20px;
+    }
+
+	.top-bar__account-action {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 30px;
+        position: relative;
+
+      &:before {
+        content: "\e953";
+        font-family: 'stm-icon';
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 1px;
+        margin-right: 12px;
+        font-size: 16px;
+        color: $yellow;
+      }
+	}
+}
+
+// Contacts
+.contact_details__box {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  margin-left: 75px;
+  padding-top: 17px;
+}
+
+.top-bar__contacts {
+	margin-bottom: 0;
+	list-style: none;
+	padding: 18px 0 11px 0;
+	font-size: 0;
+}
+
+.top-bar__contact {
+	padding: 0 26px;
+	position: relative;
+	display: inline-block;
+    letter-spacing: 0.30px;
+	font-size: 14px;
+	line-height: 1;
+	vertical-align: top;
+
+	&:not(:last-child) {
+		margin-right: 37px;
+	}
+
+	&:before {
+		@include theme-icon;
+		color: $yellow;
+		position: absolute;
+		left: 0;
+		top: -1px;
+		font-size: 16px;
+	}
+}
+
+.top-bar__search-input-text {
+	border-radius: 0;
+}
+
+.top-bar__contact_phone a {
+  text-decoration: none !important;
+}
+
+.top-bar__contact_phone:before {
+	content: "\e947";
+	top: -2px;
+}
+
+.top-bar__contact_email:before {
+	content: "\e902";
+    font-size: 12px;
+}
+
+.top-bar__contact_schedule:before {
+  content: "\e94e";
+}
+
+.top-bar__contact_address:before {
+	content: "\e92e";
+	top: -2.5px;
+}
+
+// Top Bar - Style 1
+.top-bar_view-style_1 {
+	background: $pink;
+
+	.top-bar__socials {
+		.list__item-link {
+			color: $gray;
+			opacity: .75;
+			@include transition();
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+    .top-bar__contact,
+    .top-bar__contact a,
+    .top-bar__contact a:hover{
+      color: $white;
+    }
+
+    .top-bar__contact {
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 10px;
+      margin: 0 32px;
+
+      &:before {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+	.top-bar__search {
+		position: absolute;
+		right: 0;
+
+		.stm-search-form {
+			position: relative;
+			@extend .top-bar-vertical-padd;
+		}
+
+		.stm-search-form__submit {
+			position: absolute;
+			top: 10px;
+			right: 0;
+			height: 32px;
+			width: 30px;
+			background: transparent;
+			border: none;
+			padding: 0;
+			text-align: center;
+			color: $gray;
+			font: {
+				size: $primary-font-size;
+			}
+			z-index: 2;
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			width: 30px;
+			padding: {
+				top: 5px;
+				bottom: 5px;
+			}
+			background: none;
+			border: 1px solid transparent;
+			z-index: 1;
+			font-size: 13px;
+			color: transparent;
+			@include transition();
+
+			&::-webkit-input-placeholder {
+				color: transparent;
+				@include transition();
+			}
+		}
+
+		.stm-search-form__field_active {
+			width: 170px;
+			padding: {
+				left: 10px;
+				right: 30px;
+			}
+			border-color: rgba($black, 0.1);
+			color: $dark-gray;
+
+			&::-webkit-input-placeholder {
+				color: $dark-gray;
+			}
+		}
+	}
+
+	.top-bar__language {
+		position: absolute;
+        left: -15px;
+
+		.wpml-switcher {
+			&__active {
+				color: $white;
+			}
+
+			&__list {
+				background: $lilac;
+
+				a {
+                    color: $white;
+
+					&:hover {
+						background: $yellow;
+                        color: $lilac;
+					}
+				}
+			}
+
+			&__languages {
+				&:hover {
+					.wpml-switcher__active {
+						color: $white;
+						background: $lilac;
+					}
+				}
+			}
+		}
+
+        .wpml-switcher__list a {
+          padding-left: 17px;
+        }
+	}
+
+	.top-bar__account .top-bar__account-action,
+	.top-bar__nav-menu li a {
+		color: $white;
+		@include transition();
+
+      &:hover {
+        text-decoration: underline;
+      }
+	}
+}
+
+// Top Bar - Style 2
+.top-bar_view-style_2 {
+    background-color: $lilac;
+	.top-bar__socials {
+		.list__item-link {
+			color: $white;
+			opacity: .75;
+			@include transition();
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.top-bar__language {
+		position: absolute;
+		left: -15px;
+
+		.wpml-switcher {
+			&__active {
+				color: $white;
+			}
+
+			&__list {
+				background: $lilac;
+
+				a {
+					color: $white;
+
+					&:hover {
+						background: $yellow;
+                        color: $lilac;
+					}
+				}
+			}
+
+			&__languages {
+				&:hover {
+					.wpml-switcher__active {
+						color: $white;
+						background: $lilac;
+					}
+				}
+			}
+		}
+	}
+
+	.top-bar__account .top-bar__account-action,
+	.top-bar__nav-menu li a {
+		color: $white;
+	}
+
+  .contact_details__box {
+    margin-left: 0;
+    a {
+      color: $white;
+    }
+
+    .top-bar__contact_phone {
+      &:before {
+        margin-top: 1px;
+      }
+    }
+
+    .top-bar__contact_email {
+      &:before {
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .top-bar__contact:not(:last-child) {
+    margin-right: 80px;
+  }
+
+  .top-bar__socials {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 70px;
+
+    .list__item {
+      font-size: 16px;
+    }
+  }
+
+  .top-bar__search {
+    position: absolute;
+    right: 0;
+
+    .stm-search-form {
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .stm-search-form__submit {
+      position: absolute;
+      top: 10px;
+      right: 6px;
+      height: 32px;
+      width: 30px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      text-align: center;
+      color: $white;
+      font: {
+        size: $primary-font-size;
+      }
+      z-index: 2;
+
+      .stm-icon-search {
+        &:before {
+          content: "\e944";
+        }
+      }
+
+    }
+
+    .stm-search-form__field {
+      position: relative;
+      width: 30px;
+      padding: {
+        top: 4px;
+        bottom: 4px;
+      }
+      background: none;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      z-index: 1;
+      font-size: 0;
+      color: transparent;
+      @include transition();
+      &.stm-search-form__field_active {
+        font-size: 16px;
+      }
+
+      &::-webkit-input-placeholder {
+        color: transparent;
+        @include transition();
+      }
+    }
+
+    .stm-search-form__field_active {
+      width: 200px;
+      padding: {
+        left: 15px;
+        right: 40px;
+      }
+      border-color: $white;
+      color: $white;
+
+      &::-webkit-input-placeholder {
+        color: $white;
+      }
+    }
+  }
+}
+
+// Top Bar - Style 3
+.home .top-bar_view-style_3 {
+  background: transparent;
+}
+
+.top-bar_view-style_3 {
+	background: $lilac;
+
+  .top-bar__language {
+    position: absolute;
+    left: -15px;
+
+    .wpml-switcher {
+      &__active {
+        color: $white;
+      }
+
+      &__list {
+        background: $lilac;
+
+        a {
+          color: $white;
+
+          &:hover {
+            background: $yellow;
+            color: $lilac;
+          }
+        }
+      }
+
+      &__languages {
+        &:hover {
+          .wpml-switcher__active {
+            color: $white;
+            background: $lilac;
+          }
+        }
+      }
+    }
+  }
+
+  .top-bar__search {
+    position: absolute;
+    right: 0;
+
+    .stm-search-form {
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .stm-search-form__submit {
+      position: absolute;
+      top: 10px;
+      right: 6px;
+      height: 32px;
+      width: 30px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      text-align: center;
+      color: $white;
+      font: {
+        size: $primary-font-size;
+      }
+      z-index: 2;
+
+      .stm-icon-search {
+        &:before {
+          content: "\e944";
+        }
+      }
+
+    }
+
+    .stm-search-form__field {
+      position: relative;
+      width: 30px;
+      padding: {
+        top: 4px;
+        bottom: 4px;
+      }
+      background: none;
+      border: 2px solid transparent;
+      border-radius: 25px;
+      z-index: 1;
+      font-size: 0;
+      color: transparent;
+      @include transition();
+      &.stm-search-form__field_active {
+        font-size: 16px;
+      }
+
+      &::-webkit-input-placeholder {
+        color: transparent;
+        @include transition();
+      }
+    }
+
+    .stm-search-form__field_active {
+      width: 200px;
+      padding: {
+        left: 15px;
+        right: 40px;
+      }
+      border-color: $white;
+      color: $white;
+
+      &::-webkit-input-placeholder {
+        color: $white;
+      }
+    }
+  }
+
+  .top-bar__nav {
+    display: inline-block;
+    text-align: center;
+
+    .menu-item {
+      a {
+        color: $white;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+  }
+
+  .top-bar__account {
+    display: inline-block;
+    float: none;
+
+    .top-bar__account-action {
+      color: $white;
+
+      &:hover {
+        color: $pink;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+// Top Bar - Style 4
+.top-bar_view-style_4 {
+  background-color: rgba($white, 0.75);
+
+  .top-bar__content {
+    border-bottom: 1px solid rgba(#56509f, 0.25);
+  }
+
+  .top-bar__search {
+    float: left;
+    position: relative;
+
+    .stm-search-form {
+      position: relative;
+      padding: 0;
+      margin-top: 5px;
+      @extend .top-bar-vertical-padd;
+    }
+
+    .stm-search-form__submit {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      height: 32px;
+      width: 30px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      text-align: center;
+      color: $lilac;
+      font: {
+        size: $primary-font-size;
+      }
+      z-index: 2;
+
+      .stm-icon-search {
+        &:before {
+          content: "\e944";
+        }
+      }
+    }
+
+    .stm-search-form__field {
+      position: relative;
+      width: 30px;
+      padding: {
+        top: 5px;
+        bottom: 5px;
+      }
+      background: none;
+      border-radius: 25px;
+      border: 1px solid transparent;
+      z-index: 1;
+      font-size: 0;
+      color: transparent;
+      @include transition();
+      &.stm-search-form__field_active {
+        font-size: 14px;
+      }
+
+      &::-webkit-input-placeholder {
+        color: transparent;
+        @include transition();
+      }
+    }
+
+    .stm-search-form__field_active {
+      width: 200px;
+      padding: {
+        left: 15px;
+        right: 30px;
+      }
+      border-color: $pink;
+      color: $dark-gray;
+
+      &::-webkit-input-placeholder {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  .contact_details__box {
+    margin-left: 0;
+
+    .top-bar__contact {
+      color: $lilac;
+
+      &:before {
+        color: $pink;
+      }
+
+      a {
+        color: $lilac;
+      }
+
+      &:not(:last-child) {
+        margin-right: 47px;
+      }
+
+      &.top-bar__contact_email {
+        &:before {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+
+  .shopping-cart_small {
+    border: 0;
+    margin: 0;
+
+    .shopping-cart__left {
+      padding-top: 12px;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      .shopping-cart__left {
+        color: $pink;
+      }
+    }
+  }
+}
+
+.top-bar-mobile {
+	display: none;
+	padding: 0 20px;
+	background: $white;
+	border-bottom: 1px solid #bfbfbf;
+	@include clearfix();
+
+	.top-bar-mobile__language {
+		float: left;
+
+		#lang_sel {
+			position: relative;
+			z-index: 9;
+			float: left;
+			text-align: left;
+			font-size: 13px;
+			@include transition();
+
+			> ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				> li {
+					.lang_sel_sel {
+						position: relative;
+						display: block;
+						padding: 15px 40px 15px 20px;
+						text-decoration: none;
+						color: #999999;
+
+						&:after {
+							content: "\f107";
+							@include fa-icon();
+							position: absolute;
+							right: 12px;
+							top: 50%;
+							margin: -7px 0 0;
+						}
+					}
+
+					&:hover {
+						.lang_sel_sel {
+							color: $white;
+						}
+					}
+
+					> ul {
+						position: absolute;
+						visibility: hidden;
+						left: 0;
+						top: 100%;
+						min-width: 100%;
+						padding: 0;
+						margin: 0;
+						background: $dark-blue;
+						opacity: 0;
+						list-style: none;
+						@include transition();
+
+						a {
+							display: block;
+							padding: 8px 20px;
+							text-decoration: none;
+							color: $white;
+							@include transition();
+
+							&:hover {
+								background: $blue;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					background: $dark-blue;
+				}
+			}
+
+			&:hover {
+				> ul > li > ul {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.top-bar-mobile__search {
+		float: right;
+
+		.stm-search-form {
+			position: relative;
+			padding: {
+				top: 9px;
+				bottom: 9px;
+			}
+
+			&:before {
+				content: "\e944";
+				@include theme-icon;
+				position: absolute;
+				left: 8px;
+				height: 30px;
+				line-height: 38px;
+				z-index: 1;
+				color: $gray;
+				font: {
+					size: $primary-font-size;
+				}
+			}
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			width: 30px;
+			padding: {
+				top: 5px;
+				bottom: 5px;
+				left: 30px;
+				right: 0;
+			}
+			background: none;
+			border-radius: 0;
+			border: 1px solid transparent;
+			cursor: pointer;
+			z-index: 2;
+			font-size: 13px;
+			@include transition();
+
+			&:focus {
+				width: 170px;
+				cursor: text;
+				border-color: rgba($black, 0.1);
+				padding-right: 10px;
+			}
+		}
+
+		.stm-search-form__submit {
+			display: none;
+		}
+	}
+}

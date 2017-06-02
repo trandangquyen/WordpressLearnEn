@@ -1,0 +1,55 @@
+#sb_instagram  {
+	&.stm-instagram-feed {
+		#sbi_images {
+			padding: 0 !important;
+			margin: 0 -8.5px;
+			width: auto !important;
+
+			.sbi_type_image {
+				padding: 0 8.5px !important;
+			}
+		}
+
+		#sbi_load {
+			text-align: left;
+
+			.sbi_follow_btn {
+				margin: 0;
+			}
+		}
+
+		.sbi_follow_btn a {
+			margin-top: 25px;
+			padding: 11px 30px 11px 24px;
+			background: transparent;
+			border: 2px solid #4090db;
+			border-radius: 0;
+			font-size: 16px;
+			color: $dark-blue;
+
+			.fa {
+				color: #125688;
+				margin-right: 15px !important;
+			}
+
+			&:hover {
+				background: #4090db;
+				color: $white;
+
+				.fa {
+					color: $white;
+				}
+			}
+
+			&:active {
+				background: #125688;
+				border-color: #125688;
+				color: $white;
+
+				.fa {
+					color: $white;
+				}
+			}
+		}
+	}
+}

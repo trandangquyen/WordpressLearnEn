@@ -1,0 +1,132 @@
+.stm-contact-person {
+	@include clearfix();
+}
+
+.stm-contact-person__photo {
+	float: left;
+	max-width: 100px;
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.stm-contact-person__data {
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.stm-contact-person__question {
+	margin: {
+		top: -3px;
+		bottom: 11px;
+	};
+	font-size: 14px;
+	line-height: normal;
+	color: $dark-gray;
+}
+
+.stm-contact-person__name {
+	margin: 0 0 11px 0;
+	font-size: 18px;
+	line-height: normal;
+	color: $dark-blue;
+}
+
+.stm-contact-person__contacts {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.stm-contact-person__contact {
+	position: relative;
+	padding-left: 30px;
+	color: $dark-gray;
+
+	&:not(:last-child) {
+		margin-bottom: 5px;
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 2px;
+		@include theme-icon;
+		color: $green;
+	}
+}
+
+.stm-contact-person__contact_type_tel {
+	a {
+		color: $dark-gray;
+		text-decoration: none;
+	}
+	&:before { content: "\e904"; }
+}
+
+.stm-contact-person__contact_type_email {
+	&:before {
+		content: "\e902";
+		top: 4px;
+	}
+}
+
+.stm-contact-details_box {
+  .stm-contact-details__items_box {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+    list-style: none;
+
+    li {
+      float: left;
+      width: 50%;
+      margin-bottom: 12px;
+      letter-spacing: 0.30px;
+      font-size: 16px;
+      color: $dark-gray;
+
+      .stm-icon {
+        display: inline-block;
+        vertical-align: top;
+        width: 16px;
+        margin-top: 6px;
+        margin-right: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: $pink;
+      }
+
+      a {
+        color: $lilac;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+
+    .stm-contact-details__item_type_email {
+      .stm-icon {
+        margin-top: 8px;
+        font-size: 12px;
+      }
+    }
+
+    .stm-contact-details__item_type_address {
+      width: 100%;
+    }
+  }
+
+  .list_social-networks .list__item-link {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

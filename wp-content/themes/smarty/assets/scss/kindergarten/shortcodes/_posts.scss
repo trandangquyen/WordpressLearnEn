@@ -1,0 +1,122 @@
+// Posts - Grid
+.stm-post_view_grid {
+  transform: translateZ(0);
+
+  .stm-post__thumbnail {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .stm-post__caption-container {
+    padding: 0 30px;
+    margin-top: -50px;
+  }
+
+  .stm-post__caption {
+    position: relative;
+    padding: 30px 30px 34px;
+    background: $white;
+    width: 100%;
+    min-height: 157px;
+    max-width: 100%;
+    @include transition();
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background: $lilac;
+      @include transition(height);
+      z-index: 1;
+    }
+  }
+
+  &:hover {
+    .stm-post__caption {
+      &:after {
+        height: 100%;
+      }
+    }
+  }
+
+  .stm-post__title {
+    position: relative;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    z-index: 2;
+
+    a {
+      color: $dark-blue;
+      text-decoration: none;
+      @include transition();
+    }
+  }
+
+  &:hover {
+    .stm-post__title a {
+      color: $white;
+    }
+  }
+
+  .stm-post__date {
+    position: relative;
+    font-size: 13px;
+    color: $pink;
+    z-index: 2;
+    @include transition();
+
+    a {
+      color: inherit;
+    }
+
+    .fa {
+      margin-right: 9px;
+    }
+  }
+
+  &:hover {
+    .stm-post__date {
+      color: $white;
+    }
+  }
+
+}
+
+.stm-carousel_view_posts {
+  padding-bottom: 72px;
+
+  .stm-post_view_grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    @include transition(opacity);
+  }
+
+  &.owl-loaded {
+    .stm-post_view_grid {
+      position: relative;
+      opacity: 1;
+    }
+  }
+
+  .owl-controls {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+  }
+  .owl-dots {
+    text-align: center;
+
+    .owl-dot span {
+      background: rgba( $dark-blue, .25 );
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.stm-icon-list__heading {
+	position: relative;
+	padding-left: 27px;
+
+	.stm-icon-list__icon {
+		position: absolute;
+		left: 1px;
+		top: 2px;
+		font-size: 16px;
+	}
+}
+
+.stm-icon-list__title {
+	margin-bottom: 22px;
+	line-height: normal;
+    color: $black;
+}
+
+.stm-icon-list__list {
+	margin-bottom: 30px;
+	padding-left: 27px;
+	list-style: none;
+}
+
+.stm-icon-list__list-item {
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+.stm-icon-list__item-title {
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: $dark-blue;
+	line-height: normal;
+}
+
+.stm-icon-list__item-sub-title {
+	font-size: 13px;
+	color: $light-gray;
+	line-height: normal;
+}

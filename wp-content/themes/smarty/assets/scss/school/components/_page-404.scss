@@ -1,0 +1,30 @@
+.error404,
+.page-template-404 {
+  .content {
+    margin-top: 150px;
+    height: 100%;
+    padding: 449px 0 0;
+    background-image: url("../../img/tmp/bg-404.jpg");
+    background-color: $black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-top: 4px solid transparent;
+  }
+
+  .footer {
+    background: transparent;
+  }
+}
+
+.error-404 {
+  margin-bottom: 110px;
+  h1 {
+    line-height: 54px;
+    color: $white;
+  }
+
+  .stm-separator {
+    margin-bottom: 0;
+  }
+}

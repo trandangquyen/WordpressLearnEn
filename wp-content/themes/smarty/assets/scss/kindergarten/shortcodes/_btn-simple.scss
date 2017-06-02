@@ -1,0 +1,605 @@
+.stm-container {
+	@include clearfix();
+}
+
+.stm-btn-container_left {
+	text-align: left;
+}
+
+.stm-btn-container_right {
+	text-align: right;
+}
+
+.stm-btn-container_center {
+	text-align: center;
+}
+
+.stm-btn-container_inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.stm-btn {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	line-height: 1;
+	vertical-align: top;
+	@include transition();
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	span, i {
+		position: relative;
+	}
+}
+
+.stm-btn_md {
+	min-width: 230px;
+    font-weight: 700;
+	font-size: 18px;
+
+	&.stm-btn_outline {
+		border-width: 2px;
+		border-style: solid;
+		padding: 0 30px 4px;
+		line-height: 42px;
+        border-radius: 30px;
+	}
+
+	&.stm-btn_flat {
+		border-width: 2px;
+		border-style: solid;
+        padding: 0 30px 4px;
+        line-height: 42px;
+        border-radius: 30px;
+	}
+
+	&.stm-btn_icon-right {
+		span,
+		i {
+			margin-left: 7px;
+		}
+	}
+
+	&.stm-btn_icon-left {
+		i,
+		span {
+			margin-right: 7px;
+		}
+	}
+
+	span, i {
+		&.stm-icon-arrow-right {
+			font-size: 6px;
+		}
+	}
+}
+
+.stm-btn_sm {
+	font-size: 13px;
+
+	&.stm-btn_outline {
+		border-width: 2px;
+		border-style: solid;
+		padding: 0 20px;
+		line-height: 36px;
+	}
+
+	&.stm-btn_flat {
+		border-width: 2px;
+		border-style: solid;
+		padding: 0 20px;
+		line-height: 36px;
+	}
+
+	&.stm-btn_icon-right i {
+		margin-left: 6px;
+	}
+
+	&.stm-btn_icon-left i {
+		margin-right: 6px;
+	}
+
+	span, i {
+		&.stm-icon-arrow-right {
+			font-size: 5px;
+		}
+	}
+}
+
+.stm-btn_pink {
+	&.stm-btn_outline {
+		background: transparent;
+		border-color: $pink;
+		color: $lilac;
+
+		&:hover {
+			background: $pink;
+			color: $white;
+			border-color: $pink;
+
+            i {
+              color: $yellow;
+            }
+		}
+
+		&:active {
+			background: $pink;
+			color: $lilac;
+			border-color: $pink;
+
+            i {
+              color: $lilac;
+            }
+		}
+
+		&.stm-btn_disabled,
+		&.stm-btn_disabled:hover,
+		&.stm-btn_disabled:active,
+		&.stm-btn_disabled:focus {
+			color: $lilac;
+			border-color: $pink;
+			background: transparent;
+			cursor: not-allowed;
+            opacity: 0.5;
+
+            i {
+              color: $lilac;
+            }
+		}
+	}
+
+	&.stm-btn_flat {
+		background: $pink;
+		border-color: $pink;
+		color: $white;
+
+        i {
+          color: $yellow;
+        }
+
+		&:hover {
+			background: transparent;
+			color: $lilac;
+			border-color: $pink;
+
+            i {
+              color: $lilac;
+            }
+		}
+
+		&:active {
+            background: $pink;
+            color: $lilac;
+            border-color: $pink;
+
+            i {
+              color: $lilac;
+            }
+		}
+
+		&.stm-btn_disabled,
+		&.stm-btn_disabled:hover,
+		&.stm-btn_disabled:active,
+		&.stm-btn_disabled:focus {
+            color: $lilac;
+            border-color: $pink;
+            background: transparent;
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            i {
+              color: $lilac;
+            }
+		}
+	}
+}
+
+.stm-btn_yellow {
+  &.stm-btn_outline {
+    background: transparent;
+    border-color: $yellow;
+    color: $white;
+
+    &:hover {
+      background: $yellow;
+      color: $lilac;
+      border-color: $yellow;
+
+      i,
+      span {
+        color: $pink;
+      }
+    }
+
+    &:active {
+      background: $yellow;
+      color: $pink;
+      border-color: $yellow;
+    }
+
+    &.stm-btn_disabled,
+    &.stm-btn_disabled:hover,
+    &.stm-btn_disabled:active,
+    &.stm-btn_disabled:focus {
+      color: $white;
+      border-color: $yellow;
+      background: transparent;
+      cursor: not-allowed;
+      opacity: 0.5;
+
+      i,
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &.stm-btn_flat {
+    background: $yellow;
+    border-color: $yellow;
+    color: $lilac;
+
+    i,
+    span {
+      color: $pink;
+    }
+
+    &:hover {
+      background: transparent;
+      color: $white;
+      border-color: $yellow;
+
+      i,
+      span {
+        color: $white;
+      }
+    }
+
+    &:active {
+      background: $pink;
+      color: $lilac;
+      border-color: $pink;
+
+      i,
+      span {
+        color: $lilac;
+      }
+    }
+
+    &.stm-btn_disabled,
+    &.stm-btn_disabled:hover,
+    &.stm-btn_disabled:active,
+    &.stm-btn_disabled:focus {
+      color: $white;
+      border-color: $yellow;
+      background: transparent;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+}
+
+//Purpure
+.stm-btn_purpure {
+  &.stm-btn_outline {
+    background: transparent;
+    border-color: $purpure;
+    color: $white;
+
+    &:hover {
+      background: $purpure;
+      color: $lilac;
+      border-color: $purpure;
+
+      i,
+      span {
+        color: $pink;
+      }
+    }
+
+    &:active {
+      background: $purpure;
+      color: $pink;
+      border-color: $purpure;
+    }
+
+    &.stm-btn_disabled,
+    &.stm-btn_disabled:hover,
+    &.stm-btn_disabled:active,
+    &.stm-btn_disabled:focus {
+      color: $white;
+      border-color: $purpure;
+      background: transparent;
+      cursor: not-allowed;
+      opacity: 0.5;
+
+      i,
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &.stm-btn_flat {
+    background: transparent;
+    border-color: $purpure;
+    color: $lilac;
+
+    i,
+    span {
+      color: $pink;
+    }
+
+    &:hover {
+      background: $purpure;
+      color: $white;
+      border-color: $purpure;
+
+      i,
+      span {
+        color: $white;
+      }
+    }
+
+    &:active {
+      background: $purpure;
+      color: $lilac;
+      border-color: $purpure;
+
+      i,
+      span {
+        color: $lilac;
+      }
+    }
+
+    &.stm-btn_disabled,
+    &.stm-btn_disabled:hover,
+    &.stm-btn_disabled:active,
+    &.stm-btn_disabled:focus {
+      color: $white;
+      border-color: $purpure;
+      background: transparent;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+}
+
+.stm-btn_white-secondary,
+.stm-btn_white {
+	&.stm-btn_outline {
+		background: transparent;
+		border-color: $white;
+		color: $white;
+
+		&:active,
+		&:hover {
+			background: $white;
+			color: $green;
+			border-color: $white;
+		}
+
+		&:active {
+			opacity: .75;
+		}
+
+		&.stm-btn_disabled,
+		&.stm-btn_disabled:hover,
+		&.stm-btn_disabled:active,
+		&.stm-btn_disabled:focus {
+			background: transparent;
+			border-color: $white;
+			color: $white;
+			opacity: .5;
+			cursor: not-allowed;
+		}
+	}
+
+	&.stm-btn_flat {
+		background: $white;
+		border-color: $white;
+		color: $green;
+
+		&:active,
+		&:hover {
+			background: transparent;
+			color: $white;
+			border-color: $white;
+		}
+
+		&:active {
+			opacity: .75;
+		}
+
+		&.stm-btn_disabled,
+		&.stm-btn_disabled:hover,
+		&.stm-btn_disabled:active,
+		&.stm-btn_disabled:focus {
+			color: $green;
+			border-color: $white;
+			background: $white;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.stm-btn_white-secondary {
+	&.stm-btn_outline {
+		&:active,
+		&:hover {
+			color: $blue;
+		}
+
+		&.stm-btn_disabled,
+		&.stm-btn_disabled:hover,
+		&.stm-btn_disabled:active,
+		&.stm-btn_disabled:focus {
+			color: $white;
+		}
+	}
+
+	&.stm-btn_flat {
+		&:active,
+		&:hover {
+			color: $blue;
+		}
+
+		&.stm-btn_disabled,
+		&.stm-btn_disabled:hover,
+		&.stm-btn_disabled:active,
+		&.stm-btn_disabled:focus {
+			color: $white;
+		}
+	}
+}
+
+.stm-btn_custom {
+	&.stm-btn_disabled {
+		opacity: .5;
+		cursor: not-allowed;
+	}
+}
+
+.stm-btn_error {
+	&.stm-btn_outline {
+		border-color: #e62117;
+		color: $dark-blue;
+
+		i {
+			color: #cc181e;
+		}
+
+		&:focus {
+			color: $dark-blue;
+			background: transparent;
+		}
+
+		&:hover {
+			background: #e62117;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+
+		&:active {
+			background: #cc181e;
+			border-color: #cc181e;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+
+	&.stm-btn_flat {
+		border-color: #e62117;
+		background: #e62117;
+		color: $white;
+
+		i {
+			color: $white;
+		}
+
+		&:focus {
+			color: $white;
+			background: #e62117;
+		}
+
+		&:hover {
+			background: transparent;
+			color: $dark-blue;
+
+			i {
+				color: #cc181e;
+			}
+		}
+
+		&:active {
+			background: #cc181e;
+			border-color: #cc181e;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+}
+
+.stm-btn_warning {
+	&.stm-btn_outline {
+		border-color: #ff9337;
+		color: $dark-blue;
+
+		i {
+			color: #ff5137;
+		}
+
+		&:focus {
+			color: $dark-blue;
+			background: transparent;
+		}
+
+		&:hover {
+			background: #ff9337;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+
+		&:active {
+			background: #ff5137;
+			border-color: #ff5137;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+
+	&.stm-btn_flat {
+		border-color: #ff9337;
+		background: #ff9337;
+		color: $white;
+
+		i {
+			color: $white;
+		}
+
+		&:focus {
+			background: #ff9337;
+			color: $white;
+		}
+
+		&:hover {
+			background: transparent;
+			color: $dark-blue;
+
+			i {
+				color: #ff5137;
+			}
+		}
+
+		&:active {
+			background: #ff5137;
+			border-color: #ff5137;
+			color: $white;
+
+			i {
+				color: $white;
+			}
+		}
+	}
+}

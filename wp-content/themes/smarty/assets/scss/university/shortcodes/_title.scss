@@ -1,0 +1,122 @@
+.stm-title {
+  margin-bottom: 34px;
+}
+
+.stm-title.wrap-title {
+  float: left;
+  margin-right: 10px;
+}
+
+.stm-title_sep_left,
+.stm-title_sep_right {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  .stm-separator__line {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+.stm-title_sep_right {
+  .stm-separator__line {
+    margin-right: -100%;
+    margin-left: 15px;
+  }
+}
+
+.stm-title_sep_left {
+  .stm-separator__line {
+    margin-left: -100%;
+    margin-right: 15px;
+  }
+}
+
+.stm-separator_type_title {
+  &.stm-separator_has_subtitle {
+    margin-bottom: 0;
+  }
+
+  .stm-separator__line {
+    background: $dark-red;
+    width: 60px;
+    height: 2px;
+  }
+}
+
+.stm-subtitle {
+  margin-bottom: 37px;
+  font: {
+    size: 20px;
+  }
+  line-height: 30px;
+}
+
+.wrap-title.stm-subtitle {
+  overflow: hidden;
+  line-height: 26px;
+  padding-left: 60px;
+  padding-top: 6px;
+  font-size: 14px;
+}
+
+.wrap-title.stm-subtitle a {
+  text-decoration: none !important;
+}
+
+.stm-more-link.stm-title-more-link {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  margin-left: 50px;
+  padding-bottom: 0;
+}
+
+.stm-more-link.stm-title-more-link.stm-font_color_white {
+  color: $white !important;
+}
+
+.stm-more-link.stm-title-more-link.stm-font_color_dark-blue {
+  color: $dark-blue !important;
+}
+
+.stm-more-link.stm-title-more-link.stm-font_color_red {
+  color: $dark-red !important;
+}
+
+.stm-more-link.stm-title-more-link.stm-font_sep_color_white {
+  &:after {
+    background-color: $white !important;
+  }
+}
+
+.stm-more-link.stm-title-more-link.stm-font_sep_color_dark-blue {
+  &:after {
+    background-color: $dark-blue !important;
+  }
+}
+
+.stm-more-link.stm-title-more-link.stm-font_sep_color_red {
+  &:after {
+    background-color: $dark-red !important;
+  }
+}
+
+.wrap-title-box {
+  float: left;
+  width: 100%;
+}
+
+.wrap-title-box-long {
+  .stm-title {
+    margin-bottom: 0 !important;
+  }
+
+  .stm-title-more-link {
+    margin: 0 0 40px !important;
+  }
+  
+}

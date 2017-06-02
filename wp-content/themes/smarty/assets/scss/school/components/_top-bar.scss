@@ -1,0 +1,816 @@
+.top-bar-vertical-padd {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.top-bar {
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+
+.top-bar__content {
+	position: relative;
+	min-height: 50px;
+}
+
+// Search
+.top-bar__search {
+	.stm-search-form__submit-text {
+		display: none;
+	}
+}
+
+// Language
+.wpml-switcher {
+	position: relative;
+	text-align: left;
+
+	&__active {
+		position: relative;
+		display: block;
+		padding: 15px 40px 15px 20px;
+		text-decoration: none;
+		font-size: 13px;
+
+		&:after {
+			content: "\f107";
+			@include fa-icon();
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			margin: -7px 0 0;
+		}
+	}
+
+	&__list {
+		position: absolute;
+		visibility: hidden;
+		left: 0;
+		top: 100%;
+		min-width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		opacity: 0;
+		@include transition();
+
+		a {
+			display: block;
+			padding: 8px 20px;
+			font-size: 13px;
+			line-height: 20px;
+			text-decoration: none;
+			@include transition();
+		}
+	}
+
+	&__languages {
+		&:hover {
+			.wpml-switcher__list {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&_type_top-bar {
+		float: left;
+	}
+}
+
+// Navigation
+.top-bar__nav {
+	display: inline-block;
+	@extend .top-bar-vertical-padd;
+}
+
+.top-bar__nav-menu {
+	li {
+		line-height: 30px;
+	}
+}
+
+// Account
+.top-bar__account {
+	display: inline-block;
+	@extend .top-bar-vertical-padd;
+
+	.top-bar__account-action {
+		display: inline-block;
+		font-size: 13px;
+		line-height: 30px;
+	}
+}
+
+// Contacts
+.top-bar__contacts {
+	margin-bottom: 0;
+	list-style: none;
+	padding: 18px 0 11px 0;
+	font-size: 0;
+}
+
+.top-bar__contact {
+	padding-left: 30px;
+	position: relative;
+	display: inline-block;
+	font-size: 13px;
+	line-height: 1;
+	vertical-align: top;
+
+	&:not(:last-child) {
+		margin-right: 37px;
+	}
+
+	&:before {
+		@include theme-icon;
+		color: $green;
+		position: absolute;
+		left: 0;
+		top: -1px;
+		font-size: 16px;
+	}
+}
+
+.top-bar__search-input-text {
+	border-radius: 0;
+}
+
+.top-bar__contact_phone:before {
+	content: "\e904";
+	top: -2px;
+}
+
+.top-bar__contact_email:before {
+	content: "\e902";
+}
+
+.top-bar__contact_address:before {
+	content: "\e905";
+	top: -2.5px;
+}
+
+// Top Bar - Style 1
+.top-bar_view-style_1 {
+	background: $white;
+	border-bottom: 1px solid rgba($black, .1);
+
+	.top-bar__socials {
+		.list__item-link {
+			color: $gray;
+			opacity: .75;
+			@include transition();
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.top-bar__search {
+		position: absolute;
+		right: 0;
+
+		.stm-search-form {
+			position: relative;
+			@extend .top-bar-vertical-padd;
+		}
+
+		.stm-search-form__submit {
+			position: absolute;
+			top: 10px;
+			right: 0;
+			height: 32px;
+			width: 30px;
+			background: transparent;
+			border: none;
+			padding: 0;
+			text-align: center;
+			color: $gray;
+			font: {
+				size: $primary-font-size;
+			}
+			z-index: 2;
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			width: 30px;
+			padding: {
+				top: 5px;
+				bottom: 5px;
+			}
+			background: none;
+			border: 1px solid transparent;
+			z-index: 1;
+			font-size: 13px;
+			color: transparent;
+			@include transition();
+
+			&::-webkit-input-placeholder {
+				color: transparent;
+				@include transition();
+			}
+		}
+
+		.stm-search-form__field_active {
+			width: 170px;
+			padding: {
+				left: 10px;
+				right: 30px;
+			}
+			border-color: rgba($black, 0.1);
+			color: $dark-gray;
+
+			&::-webkit-input-placeholder {
+				color: $dark-gray;
+			}
+		}
+	}
+
+	.top-bar__language {
+		position: absolute;
+		left: -20px;
+
+		.wpml-switcher {
+			&__active {
+				color: #999999;
+			}
+
+			&__list {
+				background: $blue;
+
+				a {
+					color: $white;
+
+					&:hover {
+						background: $green;
+					}
+				}
+			}
+
+			&__languages {
+				&:hover {
+					.wpml-switcher__active {
+						color: $white;
+						background: $blue;
+					}
+				}
+			}
+		}
+	}
+
+	.top-bar__account .top-bar__account-action,
+	.top-bar__nav-menu li a {
+		color: #999999;
+		@include transition();
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+// Top Bar - Style 2
+.top-bar_view-style_2 {
+	.top-bar__socials {
+		.list__item-link {
+			color: $white;
+			opacity: .75;
+			@include transition();
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.top-bar__language {
+		position: absolute;
+		left: 0;
+
+		.wpml-switcher {
+			&__active {
+				color: $white;
+			}
+
+			&__list {
+				background: $dark-blue;
+
+				a {
+					color: $white;
+
+					&:hover {
+						background: $blue;
+					}
+				}
+			}
+
+			&__languages {
+				&:hover {
+					.wpml-switcher__active {
+						color: $white;
+						background: $blue;
+					}
+				}
+			}
+		}
+	}
+
+	.top-bar__account .top-bar__account-action,
+	.top-bar__nav-menu li a {
+		color: $white;
+	}
+
+	.top-bar__search {
+		position: absolute;
+		right: 0;
+
+		.stm-search-form {
+			position: relative;
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			width: 255px;
+			padding: {
+				top: 15px;
+				bottom: 15px;
+				left: 15px;
+				right: 60px;
+			}
+			background: rgba($dark-blue, .25);
+			border: none;
+			font-size: 13px;
+			color: $white;
+			z-index: 1;
+			@include transition();
+
+			&::-webkit-input-placeholder {
+				color: rgba( $white, .5 );
+			}
+		}
+
+		.stm-search-form__submit {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 0;
+			width: 50px;
+			height: 50px;
+			background: transparent;
+			border: none;
+			text-align: center;
+			color: rgba( $white, .5 );
+			z-index: 2;
+			@include transition(color);
+		}
+
+		.stm-search-form__submit_active {
+			color: $white;
+		}
+	}
+}
+
+// Top Bar - Style 3
+.top-bar_view-style_3 {
+	background: rgba( $dark-blue, .85 );
+
+	.top-bar__content {
+		display: table;
+		width: 100%;
+		text-align: justify;
+	}
+
+	.top-bar__socials {
+		.list__item-link {
+			color: $white;
+			opacity: .75;
+			@include transition();
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.top-bar__contact,
+	.top-bar__contact a,
+	.top-bar__contact a:hover{
+		color: $white;
+	}
+
+	.top-bar__contact {
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: 10px;
+
+		&:before {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.top-bar__language {
+		position: static;
+		display: table-cell;
+		vertical-align: middle;
+
+		.wpml-switcher {
+			&__active {
+				color: $white;
+				padding: 18.5px 40px 18.5px 20px;
+				line-height: 1;
+			}
+
+			&__list {
+				background: $dark-blue;
+
+				a {
+					color: $white;
+
+					&:hover {
+						background: $blue;
+					}
+				}
+			}
+
+			&__languages {
+				&:hover {
+					.wpml-switcher__active {
+						color: $white;
+						background: $blue;
+					}
+				}
+			}
+		}
+	}
+
+	.top-bar__account .top-bar__account-action,
+	.top-bar__nav-menu li a {
+		color: $white;
+	}
+
+	.top-bar__search {
+		display: table-cell;
+		width: 50px;
+
+		.stm-search-form {
+			position: relative;
+			min-width: 50px;
+			min-height: 50px;
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			float: right;
+			background: transparent;
+			width: 50px;
+			height: 50px;
+			padding: {
+				top: 15px;
+				bottom: 15px;
+				left: 15px;
+				right: 15px;
+			}
+			border: none;
+			font-size: 13px;
+			color: $white;
+			z-index: 1;
+			cursor: pointer;
+			@include transition();
+
+			&::-webkit-input-placeholder {
+				color: transparent;
+			}
+		}
+
+		.stm-search-form__field_active {
+			width: 255px;
+			cursor: text;
+			background: rgba($white, .25);
+			padding-right: 50px;
+
+			&::-webkit-input-placeholder {
+				color: rgba( $white, .50 );
+			}
+		}
+
+		.stm-search-form__submit {
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: transparent;
+			padding: 0;
+			height: 50px;
+			width: 50px;
+			border: none;
+			font-size: $primary-font-size;
+			color: rgba( $white, .5 );
+			z-index: 2;
+			@include transition();
+		}
+
+		.stm-search-form__submit_active {
+			color: $white;
+		}
+	}
+}
+
+// Top Bar - Style 4
+.top-bar_view-style_4 {
+
+	.top-bar__content {
+		display: table;
+		line-height: 1;
+		width: 100%;
+		text-align: justify;
+	}
+
+	.top-bar__language,
+	.top-bar__socials,
+	.top-bar__contact,
+	.top-bar__search {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.top-bar__socials,
+	.top-bar__contact {
+		padding: 5px 20px;
+	}
+
+	.top-bar__search {
+		width: 50px;
+	}
+
+	.top-bar__contact,
+	.top-bar__contact a,
+	.top-bar__contact a:hover{
+		color: $white;
+	}
+
+	.top-bar__contact {
+		padding-left: 30px;
+		&:before {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.top-bar__socials {
+		.list__item {
+			padding: 0 4px;
+		}
+		.list__item-link {
+			color: $white;
+			opacity: .75;
+			@include transition();
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.top-bar__language {
+		position: static;
+
+		.wpml-switcher {
+			&__active {
+				color: $white;
+				padding: 18.5px 40px 18.5px 20px;
+				line-height: 1;
+			}
+
+			&__list {
+				background: $dark-blue;
+
+				a {
+					color: $white;
+
+					&:hover {
+						background: $blue;
+					}
+				}
+			}
+
+			&__languages {
+				&:hover {
+					.wpml-switcher__active {
+						color: $white;
+						background: $blue;
+					}
+				}
+			}
+		}
+	}
+
+	.top-bar__account .top-bar__account-action,
+	.top-bar__nav-menu li a {
+		color: $white;
+	}
+
+	.top-bar__search {
+
+		.stm-search-form {
+			min-width: 50px;
+			min-height: 50px;
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			float: right;
+			background: transparent;
+			width: 50px;
+			height: 50px;
+			padding: {
+				top: 15px;
+				bottom: 15px;
+				left: 15px;
+				right: 15px;
+			}
+			border: none;
+			font-size: 13px;
+			color: $white;
+			z-index: 1;
+			cursor: pointer;
+			@include transition();
+
+			&::-webkit-input-placeholder {
+				color: transparent;
+			}
+		}
+
+		.stm-search-form__field_active {
+			width: 255px;
+			cursor: text;
+			background: rgba($white, .25);
+			padding-right: 50px;
+
+			&::-webkit-input-placeholder {
+				color: rgba( $white, .50 );
+			}
+		}
+
+		.stm-search-form__submit {
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: transparent;
+			padding: 0;
+			height: 50px;
+			width: 50px;
+			border: none;
+			font-size: $primary-font-size;
+			color: $white;
+			z-index: 2;
+			@include transition();
+		}
+	}
+}
+
+.top-bar-mobile {
+	display: none;
+	padding: 0 20px;
+	background: $white;
+	border-bottom: 1px solid #bfbfbf;
+	@include clearfix();
+
+	.top-bar-mobile__language {
+		float: left;
+
+		#lang_sel {
+			position: relative;
+			z-index: 9;
+			float: left;
+			text-align: left;
+			font-size: 13px;
+			@include transition();
+
+			> ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				> li {
+					.lang_sel_sel {
+						position: relative;
+						display: block;
+						padding: 15px 40px 15px 20px;
+						text-decoration: none;
+						color: #999999;
+
+						&:after {
+							content: "\f107";
+							@include fa-icon();
+							position: absolute;
+							right: 12px;
+							top: 50%;
+							margin: -7px 0 0;
+						}
+					}
+
+					&:hover {
+						.lang_sel_sel {
+							color: $white;
+						}
+					}
+
+					> ul {
+						position: absolute;
+						visibility: hidden;
+						left: 0;
+						top: 100%;
+						min-width: 100%;
+						padding: 0;
+						margin: 0;
+						background: $dark-blue;
+						opacity: 0;
+						list-style: none;
+						@include transition();
+
+						a {
+							display: block;
+							padding: 8px 20px;
+							text-decoration: none;
+							color: $white;
+							@include transition();
+
+							&:hover {
+								background: $blue;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					background: $dark-blue;
+				}
+			}
+
+			&:hover {
+				> ul > li > ul {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.top-bar-mobile__search {
+		float: right;
+
+		.stm-search-form {
+			position: relative;
+			padding: {
+				top: 9px;
+				bottom: 9px;
+			}
+
+			&:before {
+				content: "\e900";
+				@include theme-icon;
+				position: absolute;
+				left: 8px;
+				height: 30px;
+				line-height: 30px;
+				z-index: 1;
+				color: $gray;
+				font: {
+					size: $primary-font-size;
+				}
+			}
+		}
+
+		.stm-search-form__field {
+			position: relative;
+			width: 30px;
+			padding: {
+				top: 5px;
+				bottom: 5px;
+				left: 30px;
+				right: 0;
+			}
+			background: none;
+			border-radius: 0;
+			border: 1px solid transparent;
+			cursor: pointer;
+			z-index: 2;
+			font-size: 13px;
+			@include transition();
+
+			&:focus {
+				width: 170px;
+				cursor: text;
+				border-color: rgba($black, 0.1);
+				padding-right: 10px;
+			}
+		}
+
+		.stm-search-form__submit {
+			display: none;
+		}
+	}
+}

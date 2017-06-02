@@ -1,0 +1,77 @@
+.stm-menu_tab {
+    display: table;
+    width: 100%;
+	margin-bottom: 35px;
+}
+
+.stm-meal-list__heading {
+	margin-bottom: 36px;
+
+	h4 {
+		overflow: hidden;
+		text-align: left;
+		margin-bottom: 0;
+	}
+}
+
+.stm-meal {
+	&.animated {
+		animation-duration: .5s;
+	}
+
+	&.has-post-thumbnail {
+		@include clearfix();
+
+		.stm-meal__thumbnail {
+			float: left;
+		}
+
+		.stm-meal__body {
+			padding-left: 20px;
+			overflow: hidden;
+		}
+	}
+}
+
+.stm-meal__title {
+	margin: {
+		top: -3px;
+		bottom: 7px;
+	}
+	font: {
+		size: 15px;
+		weight: 700;
+	}
+	line-height: 19px;
+	color: $dark-blue;
+}
+
+.stm-metal__summary {
+	font-size: 13px;
+	line-height: 22px;
+    letter-spacing: -0.20px;
+	color: $light-gray;
+}
+
+.stm-meal-list__list  {
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+
+	> li {
+		margin-bottom: 33px;
+	}
+}
+
+.stm-tab__pane-action_deal {
+	text-align: center;
+
+	.stm-btn {
+		vertical-align: middle;
+	}
+}
+
+.stm-load-more-deal .fa {
+  font-size: 16px;
+  margin-top: -4px !important;
+}

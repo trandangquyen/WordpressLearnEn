@@ -1,0 +1,65 @@
+.stm_wp_custom-menu {
+	max-width: 255px;
+	width: 100%;
+
+	.menu {
+		padding: 25px 0;
+		background: $blue;
+		list-style: none;
+		margin-bottom: 0;
+	}
+
+	.menu-item {
+		font-size: 14px;
+
+		> a {
+			position: relative;
+			display: block;
+			color: $white;
+			line-height: 24px;
+			text-transform: uppercase;
+			padding: 9px 15px 9px 40px;
+
+			&:before {
+				content: '\e90e';
+				@include theme-icon;
+				position: absolute;
+				left: 20px;
+				top: 16.5px;
+				font-size: 10px;
+				color: $white;
+				visibility: hidden;
+				opacity: 0;
+				@include transition();
+				z-index: 1;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background: $green;
+
+				&:before {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.current-menu-item {
+		&:hover a,
+		> a {
+			background: rgba($dark-blue, .1);
+			cursor: default;
+
+			&:before {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

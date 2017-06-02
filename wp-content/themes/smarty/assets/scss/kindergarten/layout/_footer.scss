@@ -1,0 +1,30 @@
+.footer {
+	.copyright {
+        background-color: $white;
+        margin: 0 -5000px;
+        padding: 28px 5000px 34px;
+        letter-spacing: 0.28px;
+		text-align: center;
+		font-size: 14px;
+		color: $gray;
+	}
+}
+
+// Default
+.footer_type_default {
+	background: $lilac;
+}
+
+// Compact
+.footer_compact {
+	padding-top: 29px;
+}
+
+// Widget Area
+.widget-area_type_footer {
+	padding: {
+		top: 61px;
+		bottom: 53px;
+	}
+}
+

@@ -1,0 +1,172 @@
+.stm-stats_counter {
+	&.stm-stats_icon_left {
+		.stm-stats__icon {
+			float: left;
+			font-size: 67px;
+			color: $pink;
+		}
+
+		.stm-stats__content {
+			overflow: hidden;
+			padding-left: 35px;
+		}
+	}
+
+    &.stm-stats_icon_center {
+      .stm-stats__icon {
+        display: block;
+        text-align: center;
+        font-size: 67px;
+        color: $pink;
+      }
+
+      .stm-stats__content {
+        text-align: center;
+      }
+
+      .stats__value-number {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+	.stm-stats__value {
+		margin: {
+			top: -6px;
+			bottom: -8px;
+		}
+        font-family: 'Grand Hotel', cursive;
+		color: $lilac;
+		font: {
+			size: 90px;
+			weight: 400;
+		}
+	}
+
+	.stats__value-number {
+		line-height: 1;
+	}
+
+	.stm-stats__descr {
+		line-height: 24px;
+        letter-spacing: 0.30px;
+        font-weight: 600;
+        font-size: 18px;
+		color: $purpure;
+	}
+}
+
+.stm-stats__icon svg path {
+	stroke: inherit !important;
+}
+
+// Countdown
+.stm_countdown {
+  position: relative;
+  padding-bottom: 37px;
+  display: inline-block;
+  vertical-align: top;
+
+  .countDiv {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 104px;
+    position: relative;
+    opacity: 1;
+  }
+  .countDiv.flash {
+    opacity: 0;
+  }
+  .position {
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 98px;
+    float: left;
+    color: $white;
+    margin-top: 16px;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 90px;
+    line-height: 98px;
+    z-index: 11;
+
+    &.first {
+      margin-left: 20px;
+    }
+  }
+  .position .digit {
+    position: absolute;
+    width: 36px;
+    height: 98px;
+    line-height: 98px;
+    top: 0;
+    left: 0;
+  }
+  .countDays,
+  .countHours,
+  .countMinutes,
+  .countSeconds {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 160px;
+    text-align: center;
+    float: left;
+    border: 2px solid $pink;
+    border-radius: 25px;
+  }
+  .countdown_label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0 8px;
+    text-transform: lowercase;
+    border-top: 1px solid $pink;
+    text-align: center;
+    font-weight: 600;
+    color: $yellow !important;
+  }
+
+  @media (max-width: 767px) {
+    .countDays,
+    .countHours,
+    .countMinutes,
+    .countSeconds {
+      width: 100px;
+      height: 140px;
+      .position {
+        width: 26px;
+        height: 88px;
+        margin-top: 6px;
+        font-size: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 529px) {
+    .countDiv {
+      display: none !important;
+    }
+
+    .countDiv.countDivHours {
+      float: left;
+      width: 100%;
+      height: 20px;
+      display: block !important;
+    }
+
+    .countDays,
+    .countHours,
+    .countMinutes,
+    .countSeconds {
+      margin: 0 10px;
+    }
+
+    &.countdownHolder {
+      max-width: 240px;
+      margin: 0 auto;
+    }
+  }
+}

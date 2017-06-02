@@ -1,0 +1,278 @@
+.tt_tabs_navigation {
+  display: table;
+  width: 100%;
+}
+
+.tt_tabs_navigation li {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+	margin: 0 !important;
+	font-size: 18px !important;
+    padding: 0 2.5px !important;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+
+    &:first-child {
+      padding-left: 0 !important;
+    }
+
+    &:last-child {
+      padding-right: 0 !important;
+    }
+
+	a {
+		border: 0 solid transparent !important;
+		padding: 19px 34px 17px !important;
+		line-height: 18px !important;
+        font-weight: 600;
+		color: $dark-blue !important;
+        position: relative;
+        -webkit-transition: all 0.4s !important;
+        transition: all 0.4s !important;
+
+		&:hover {
+			color: $white !important;
+			border: 0 !important;
+			padding-bottom: 17px !important;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+		}
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: $dark-red;
+          -webkit-transition: height 0.4s;
+          transition: height 0.4s;
+          z-index: -1;
+        }
+
+        &:hover:before {
+          height: 100%;
+        }
+	}
+
+	a.selected,
+	&.ui-tabs-active a {
+		border: 0 !important;
+		padding-bottom: 17px !important;
+        color: $white !important;
+
+		&:hover {
+			color: $white !important;
+		}
+
+        &:before {
+          height: 100%;
+        }
+	}
+}
+
+.tt_timetable th {
+	background: $white;
+}
+
+.tt_tabs_navigation {
+	margin-bottom: 40px;
+}
+
+table.tt_timetable {
+	background: transparent !important;
+}
+
+.stm-timeline {
+  position: relative;
+}
+
+// Images
+.owl-carousel.stm-timeline-images-carousel {
+  width: 50%;
+
+  .owl-stage-outer {
+    overflow: visible;
+  }
+}
+
+.stm-timeline__image {
+  transform: translateZ(0);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba( $blue, .5 );
+    @include transition();
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(1);
+    @include transition();
+  }
+}
+
+.owl-item.active {
+  .stm-timeline__image {
+    &:after {
+      opacity: 0;
+    }
+    img {
+      filter: grayscale(0)
+    }
+  }
+}
+
+// Captions
+.owl-carousel.stm-timeline-captions-carousel {
+  background: $dark-blue;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item,
+  .stm-timeline__caption {
+    height: 100%;
+  }
+
+  .stm-timeline__caption {
+    display: table;
+    height: 100%;
+  }
+
+  .stm-timeline__caption-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
+.stm-timeline__caption {
+  padding: 0 60px;
+}
+
+.stm-timeline__caption-title {
+  color: $white;
+}
+
+.stm-timeline__caption-text p {
+  color: $white;
+}
+
+// NavBar
+.stm-timeline__nav-bar {
+  margin-bottom: 50px;
+  @include clearfix();
+
+  .stm-timeline__steps {
+    float: left;
+    margin-top: 23px;
+  }
+
+  .stm-timeline__nav {
+    float: right;
+  }
+}
+
+.stm-timeline__steps-list {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+
+  .stm-timeline__step {
+    float: left;
+    width: 99px;
+    height: 4px;
+    margin-right: 1px;
+    background: #d9d9d9;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 0;
+      height: 10px;
+      width: 1px;
+      background: #d9d9d9;
+      z-index: 1;
+    }
+
+    &:last-child {
+      width: 0;
+    }
+
+    a {
+      position: absolute;
+      left: 0;
+      transform: translateX(-50%);
+      top: 14px;
+      line-height: 1;
+      font-size: 15px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .stm-timeline__steps-progress {
+    position: absolute;
+    height: 4px;
+    width: 0;
+    background: $dark-red;
+    z-index: 1;
+    @include transition();
+  }
+}
+
+.stm-timeline__nav {
+  border: 2px solid $dark-red;
+  border-radius: 4px;
+  @include clearfix();
+
+  .owl-prev,
+  .owl-next {
+    float: left;
+    width: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: $dark-blue;
+    font-size: 11px;
+    cursor: pointer;
+    @include transition();
+
+    &:hover {
+      background: $dark-red;
+      color: $white;
+    }
+  }
+
+  .owl-prev {
+    position: relative;
+    width: 47px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: $dark-red;
+    }
+  }
+}

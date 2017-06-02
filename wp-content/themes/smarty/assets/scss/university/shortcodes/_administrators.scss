@@ -1,0 +1,294 @@
+.stm-administrator_view_list-item {
+	margin-bottom: 50px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid rgba($gray, 0.25%);
+}
+
+.stm-administrator_view_list-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.stm-administrator__info-content {
+    display: block;
+    overflow: hidden;
+	position: relative;
+	padding: 0 30px 10px;
+	@include transition();
+}
+
+.stm-administrator__photo {
+    float: left;
+    max-width: 160px;
+
+	img {
+		display: block;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.stm-administrator__name {
+	padding-bottom: 12px;
+	font-size: 30px;
+	color: $black;
+    line-height: 54px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@include transition();
+}
+
+.stm-administrator__position {
+	font-size: 11px;
+	color: $dark-red;
+	white-space: nowrap;
+	overflow: hidden;
+    margin-bottom: 9px;
+    letter-spacing: 1px;
+    line-height: 11px;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+	text-overflow: ellipsis;
+	@include transition();
+}
+
+.stm-administrator__description {
+  margin-bottom: 20px;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 30px;
+  font-size: 15px;
+  color: $dark-gray;
+}
+
+.stm-administrator__socials {
+  margin-bottom: 20px;
+}
+
+.stm-administrator__profile_link {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 6px;
+  text-decoration: none !important;
+  color: $dark-blue !important;
+}
+
+.stm-administrator__profile_link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 2px;
+  background-color: $dark-red;
+  @include transition(width, .3s);
+}
+
+.stm-administrator__profile_link:hover:after {
+  width: 100%;
+  @include transition(width, .3s);
+}
+
+.stm-staff-table {
+	width: 100%;
+	font-size: 14px;
+
+	th {
+		background: $green;
+		padding: 8px 15px;
+		text-transform: uppercase;
+		line-height: 24px;
+		color: $white;
+	}
+
+	td {
+		background: $white;
+		padding: 13px 15px;
+		border-bottom: 1px solid rgba($black, .15);
+		line-height: 24px;
+		color: $dark-gray;
+	}
+}
+
+// Teacher - Contact details
+.stm-contact-details_type_administrator {
+	.stm-contact-details__items {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	.stm-contact-details__item {
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 12px;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 15px;
+		line-height: 24px;
+		color: $dark-gray;
+
+		a {
+			color: $dark-blue;
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:before {
+			@include theme-icon;
+			position: absolute;
+			top: 5px; left: 0;
+            font-size: 16px;
+			color: $dark-red;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.stm-contact-details__item_type_address {
+		&:before {
+			content: "\e92e";
+            font-size: 17px;
+		}
+	}
+
+	.stm-contact-details__item_type_tel {
+		&:before {
+			content: "\e904";
+		}
+	}
+
+	.stm-contact-details__item_type_skype {
+		&:before {
+			content: "\e912";
+		}
+	}
+
+	.stm-contact-details__item_type_url {
+		&:before {
+			content: "\e92f";
+		}
+	}
+
+	.stm-contact-details__item_type_email {
+		&:before {
+			content: "\e902";
+		}
+	}
+
+	.stm-contact-details__item_type_fax {
+		&:before {
+			content: "\e903";
+		}
+	}
+
+    .stm-contact-details__item_type_socials {
+      display: block;
+      padding-left: 0;
+    }
+
+	.socials-list_type_administrator {
+		padding-top: 18px;
+
+		.socials-list__item-link {
+			opacity: 0.7;
+		}
+	}
+}
+
+.socials-list_type_administrator {
+	font-size: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+
+	.socials-list__item {
+		display: inline-block;
+		margin-right: 8px;
+		font-size: 18px;
+		vertical-align: middle;
+
+		.socials-list__item-link {
+			position: relative;
+			display: block;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 32px;
+			color: $white;
+			@include transition();
+
+			span {
+				display: inline-block;
+			}
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.socials-list__item-link_type_facebook {
+			background: #3a5897;
+		}
+
+		.socials-list__item-link_type_twitter {
+			background: #00aced;
+		}
+
+		.socials-list__item-link_type_google-plus {
+			background: #db4437;
+			font-size: 16px;
+		}
+
+		.socials-list__item-link_type_instagram {
+			background: #ac907a;
+			font-size: 16px;
+
+            .stm-icon {
+              font-family: 'FontAwesome' !important;
+              &:before {
+                content: "\f16d";
+              }
+            }
+		}
+
+		.socials-list__item-link_type_envelope {
+			background: #ffc600;
+			padding-top: 1px;
+			font-size: 12px;
+		}
+
+		.socials-list__item-link_type_youtube {
+			background: #bb0000;
+			font-size: 14px;
+
+          .stm-icon {
+            font-family: 'FontAwesome' !important;
+            &:before {
+              content: "\f16a";
+            }
+          }
+		}
+
+		.socials-list__item-link_type_soundcloud {
+			background: #ff3a00;
+			font-size: 14px;
+		}
+	}
+}
+
+.single-stm_administrator .content {
+  padding-top: 0;
+  padding-bottom: 0;
+}

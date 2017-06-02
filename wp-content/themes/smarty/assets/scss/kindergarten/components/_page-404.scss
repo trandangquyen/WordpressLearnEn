@@ -1,0 +1,47 @@
+.error404,
+.page-template-404 {
+  height: 100%;
+
+  #wrapper {
+    height: 100%;
+  }
+
+  .header-holder,
+  .footer {
+    display: none;
+  }
+
+  .logo_box {
+    float: left;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .content {
+    height: 100%;
+    padding-top: 51px;
+    background-image: url("../../img/tmp/bg-404-kin.jpg");
+    background-color: $black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+    line-height: 54px;
+    color: $lilac;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .stm-btn_md {
+    min-width: 160px;
+  }
+
+  .footer {
+    background: transparent;
+  }
+}

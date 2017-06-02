@@ -1,0 +1,95 @@
+.stm_wp_custom-menu {
+	max-width: 255px;
+	width: 100%;
+
+	.menu {
+        border-top: 4px solid $dark-red;
+		padding: 15px 0;
+		background: $white;
+		list-style: none;
+		margin-bottom: 0;
+	}
+
+	.menu-item {
+		font-size: 16px;
+        padding: 0 30px;
+
+		> a {
+			position: relative;
+			display: block;
+			color: $black;
+            border-top: 1px solid $light-gray;
+			line-height: 24px;
+			padding: 16px 0 19px;
+
+			&:before {
+				content: '\e90e';
+				@include theme-icon;
+				position: absolute;
+				left: -20px;
+				top: 24px;
+				font-size: 9px;
+				color: $dark-red;
+				visibility: hidden;
+				opacity: 0;
+				@include transition();
+				z-index: 1;
+			}
+
+            &:after {
+              display: none;
+              content: "";
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              width: 0;
+              height: 1px;
+              background-color: $dark-red;
+              z-index: 10;
+            }
+
+			&:hover {
+				text-decoration: none;
+                color: $dark-red;
+
+				&:before {
+					visibility: visible;
+					opacity: 1;
+				}
+
+                &:after {
+                  width: 100%;
+                  transition: width .6s;
+                }
+			}
+
+			&:focus {
+				text-decoration: none;
+			}
+		}
+
+        &:first-child a {
+          border: 0;
+        }
+
+        &:last-child a {
+          &:after {
+            top: -1px;
+            bottom: auto;
+          }
+        }
+	}
+
+	.current-menu-item {
+		&:hover a,
+		> a {
+			cursor: default;
+            color: $dark-red;
+
+			&:before {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

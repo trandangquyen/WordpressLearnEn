@@ -1,0 +1,201 @@
+.stm-pricing__content {
+	@include clearfix();
+}
+
+.stm-pricing__side-panel {
+	float: left;
+	width: 31.531531531532%;
+	padding-top: 60px;
+}
+
+.stm-pricing__filters {
+	margin-bottom: 81px;
+	@include clearfix();
+
+	ul {
+		position: relative;
+		float: left;
+		padding-left: 0;
+		margin-bottom: 0;
+		border: 2px solid $dark-red;
+        border-radius: 4px;
+		list-style: none;
+		@include clearfix();
+	}
+
+	li {
+		float: left;
+		font-size: 14px;
+        font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.stm-pricing__filter_fluid-hover {
+		position: absolute;
+		background: $dark-red;
+		top: 0; left: 0;
+		height: 100%;
+		z-index: -1;
+		@include transition(left);
+	}
+
+	a {
+		display: block;
+		line-height: 30px;
+		padding: 3px 27px;
+		color: $dark-blue;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.stm-pricing__filter_active {
+		a {
+			color: $white;
+		}
+	}
+}
+
+.stm-pricing__features {
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 0;
+
+	li {
+		padding: 14.5px 20px;
+		background: $white;
+		font: {
+			size: 15px;
+			weight: 400;
+		}
+		line-height: 30px;
+		color: $dark-gray;
+
+		&:not(:first-child) {
+			border-top: 1px solid rgba( $dark-gray, .1 );
+		}
+	}
+}
+
+.stm-pricing__tables {
+	float: left;
+	width: 68.468468468468%;
+}
+
+.stm-pricing__tables-row {
+	display: table;
+	width: 100%;
+}
+
+.stm-pricing__tables-col {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.stm-pricing_three {
+	.stm-pricing__tables-col {
+		width: 33.33%;
+	}
+}
+
+.stm-pricing-table {
+	padding-top: 21px;
+	background: $white;
+	border-top: 4px solid $dark-red;
+	text-align: center;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.stm-pricing-table__title {
+	margin-bottom: 27px;
+	font-size: 24px;
+	line-height: 30px;
+	color: $dark-gray;
+}
+
+.stm-pricing-table__periods {
+	position: relative;
+	padding: 0 0 28px;
+	margin-bottom: 0;
+	list-style: none;
+	border-bottom: 1px solid rgba( $dark-gray, .1 );
+}
+
+.stm-pricing-table__periods-item {
+	display: none;
+	@include transition(opacity);
+}
+
+.stm-pricing-table__periods-item_active {
+	display: block;
+}
+
+.stm-pricing-table__price {
+	margin-bottom: 6px;
+	font-size: 36px;
+	line-height: 30px;
+	color: $dark-red;
+}
+
+.stm-pricing-table__period {
+	font-size: 14px;
+	line-height: 24px;
+	color: $dark-gray;
+}
+
+.stm-pricing-table__features {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.stm-pricing-table__feature {
+	padding: 14.5px 15px;
+	border-bottom: 1px solid rgba( $dark-gray, .1 );
+	line-height: 30px;
+
+	.stm-icon-check {
+		color: $green;
+	}
+
+	.stm-icon-times {
+		color: $light-gray;
+	}
+}
+
+.stm-pricing-table__feature-label {
+	display: none;
+	font: {
+		size: 14px;
+		weight: 700;
+	}
+	color: $dark-gray;
+	line-height: normal;
+}
+
+.stm-pricing-table__action {
+	padding: 25px 40px;
+	> a {
+		display: block;
+
+      .fa {
+        margin-top: -2px;
+        font-size: 12px;
+      }
+	}
+}
+
+.stm-pricing-table_featured {
+	position: relative;
+	padding-top: 31px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+	.stm-pricing-table__action {
+		padding: {
+			top: 30px;
+			bottom: 30px;
+		}
+	}
+}

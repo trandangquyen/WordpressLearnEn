@@ -1,0 +1,39 @@
+.tt_tabs_navigation li {
+	margin: 0 !important;
+	font-size: 18px !important;
+
+	a {
+		border: 2px solid transparent !important;
+		padding: 0 34px !important;
+		line-height: 46px !important;
+		color: $dark-blue !important;
+
+		&:hover {
+			color: $blue !important;
+			border: 2px solid transparent !important;
+			padding-bottom: 0 !important;
+		}
+	}
+
+	a.selected,
+	&.ui-tabs-active a {
+		border: 2px solid $green !important;
+		padding-bottom: 0 !important;
+
+		&:hover {
+			color: $dark-blue !important;
+		}
+	}
+}
+
+.tt_timetable th {
+	background: $white;
+}
+
+.tt_tabs_navigation {
+	margin-bottom: 40px;
+}
+
+table.tt_timetable {
+	background: transparent !important;
+}

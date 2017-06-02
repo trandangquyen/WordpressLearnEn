@@ -1,0 +1,292 @@
+ul.stm-list-1,
+ul.stm-list-1-white,
+ul.stm-list-1-blue,
+ul.stm-list-2,
+ul.stm-list-2-white,
+ul.stm-list-2-blue,
+ul.stm-list-1-sm,
+ul.stm-list-2-sm {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &:before {
+      position: absolute;
+    }
+
+    > ul {
+      padding-top: 14px;
+      margin-bottom: 0;
+
+      > li {
+        padding-left: 20px;
+        line-height: 24px;
+
+        &:before {
+          position: absolute;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        ul {
+          margin-bottom: 0;
+          padding-top: 14px;
+
+          li {
+            &:before {
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// List - Style
+ul.stm-list-1,
+ul.stm-list-1-sm,
+ul.stm-list-1-white,
+ul.stm-list-1-blue {
+  li {
+    color: $dark-gray;
+
+    &:before {
+      content: '\e90f';
+      @include theme-icon;
+      top: 9px;
+      left: 0;
+      font-size: 6px;
+      color: $green;
+    }
+
+    > ul {
+      > li {
+        color: $dark-gray;
+
+        &:before {
+          content: "\f111";
+          @include fa-icon();
+          top: 10px; left: 0;
+          font-size: 5px;
+          color: $green;
+        }
+
+        ul {
+          li {
+            &:before {
+              content: "\e92d";
+              @include theme-icon;
+              top: 10px; left: 0;
+              font-size: 4px;
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.stm-list-2,
+ul.stm-list-2-sm,
+ul.stm-list-2-white,
+ul.stm-list-2-blue {
+  li {
+    color: $dark-gray;
+
+    &:before {
+      content: "\f111";
+      @include fa-icon();
+      top: 9px;
+      left: 0;
+      font-size: 5px;
+      color: $green;
+    }
+  }
+}
+
+// List - Color
+ul.stm-list-1-white,
+ul.stm-list-2-white {
+  li {
+    color: $white;
+    &:before {
+      color: $white;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+
+    > ul {
+      > li {
+        color: $white;
+        &:before {
+          color: $white;
+        }
+
+        ul {
+          li {
+            &:before {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.stm-list-1-blue,
+ul.stm-list-2-blue {
+  li {
+    color: $dark-gray;
+    &:before {
+      color: $blue;
+    }
+
+    > ul {
+      > li {
+        color: $dark-gray;
+        &:before {
+          color: $blue;
+        }
+
+        ul {
+          li {
+            color: $dark-gray;
+            &:before {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+ol.stm-list-4,
+ol.stm-list-4-blue,
+ol.stm-list-4-white,
+ol.stm-list-3-blue,
+ol.stm-list-3-white,
+ol.stm-list-3 {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: li-counter;
+
+  li {
+    position: relative;
+    padding-left: 30px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:before {
+      content: counter(li-counter)".";
+      counter-increment: li-counter;
+      position: absolute;
+      top: 0; left: 0;
+    }
+
+    ol {
+      margin-bottom: 0;
+      padding-top: 12px;
+    }
+  }
+}
+
+ol.stm-list-3 {
+  li {
+    color: $dark-gray;
+
+    &:before {
+      color: $green;
+    }
+  }
+}
+
+ol.stm-list-4-white,
+ol.stm-list-4-blue,
+ol.stm-list-4 {
+  li {
+    color: $dark-gray;
+
+    &:before {
+      color: $green;
+      font-weight: 700;
+    }
+  }
+}
+
+ol.stm-list-4-white,
+ol.stm-list-3-white {
+  li {
+    color: $white;
+
+    &:before {
+      color: $white;
+    }
+  }
+}
+
+ol.stm-list-4-blue,
+ol.stm-list-3-blue {
+  li {
+    color: $dark-gray;
+
+    &:before {
+      color: $blue;
+    }
+  }
+}
+
+ul.stm-list-5 {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  li {
+    color: $dark-gray;
+    font-size: 14px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.list_inline {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .list__item {
+    display: inline-block;
+  }
+}
+
+.list_unstyle {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}

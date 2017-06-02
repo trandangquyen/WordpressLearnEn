@@ -1,0 +1,95 @@
+.stm-cta {
+	position: relative;
+	z-index: 92;
+	background: $blue;
+}
+
+.stm-cta__content {
+	display: table;
+	width: 100%;
+}
+
+.stm-cta__image {
+	display: table-cell;
+	vertical-align: middle;
+    padding: {
+      right: 65px;
+    }
+}
+
+.stm-cta__action {
+	display: table-cell;
+	max-width: 1000px;
+    margin: 0 auto;
+	vertical-align: middle;
+	padding: {
+		top: 47px;
+		bottom: 47px;
+	}
+}
+
+.stm-cta__action__content {
+  display: table;
+  width: 100%;
+}
+
+.stm-cta__action-title {
+    display: table-cell;
+	margin: 0 0 19px 0;
+    vertical-align: middle;
+	color: $white;
+}
+
+.stm-cta__action-title_text {
+  line-height: 34px;
+  font-size: 24px;
+  font: {
+    weight: 400;
+  }
+}
+
+.stm-cta__action-body {
+	display: table;
+	width: 100%;
+}
+
+.stm-cta__action-descr {
+	display: table-cell;
+    width: 10000px;
+
+	p {
+		line-height: 30px;
+        font-size: 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		color: inherit;
+	}
+
+	color: $white;
+}
+
+.stm-cta__action-btn {
+	display: table-cell;
+	vertical-align: middle;
+    text-align: right;
+
+	.stm-btn__icon {
+		margin-top: 1px;
+		font: {
+			size: 6px;
+		}
+	}
+}
+
+.stm-cta__action-btn .stm-btn {
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.stm-cta__action-btn .stm-btn .fa {
+  margin-top: -5px;
+  margin-left: 17px;
+}

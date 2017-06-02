@@ -1,0 +1,29 @@
+/*
+Theme Name: Smarty
+Theme URI: http://smartyschool.stylemixthemes.com/
+Author: StylemixThemes
+Author URI: http://stylemixthemes.com/
+Description: Smarty School WordPress theme has been specially designed with your learning community in mind. Perfect as a kindergarten, school, college or university WordPress theme, this contemporary and intuitive platform works for teachers, staff, parents and students at every level, engaging all parties in the life of your school or learning environment.
+Version: 2.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blue, black, red, dark, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, editor-style, sticky-post, theme-options
+Text Domain: smarty
+*/
+
+@media only screen and (min-width: 1199px) {
+    body.site-layout_boxed .vc_row[data-vc-full-width] {
+        left: 50% !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        margin-left: -615px !important;
+        width: 1230px !important;
+    }
+    body.site-layout_boxed .vc_row.vc_row-no-padding[data-vc-full-width] {
+        left: 50% !important;
+        padding-left: 17px !important;
+        padding-right: 17px !important;
+        margin-left: -615px !important;
+        width: 1230px !important;
+    }
+}

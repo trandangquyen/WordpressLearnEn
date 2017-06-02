@@ -1,0 +1,48 @@
+// Shopping cart
+.shopping-cart_small {
+  position: relative;
+  padding: 9.5px 10px;
+  z-index: 1;
+  background-color: $dark-red;
+
+  .shopping-cart__content {
+    padding: 15px 19px 16px;
+    border: 1px solid rgba($white, .25);
+  }
+
+  .shopping-cart__link {
+    display: block;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .shopping-cart__left {
+    float: right;
+    padding-top: 4px;
+    font-size: 40px;
+    color: rgba($white, 0.35) !important;
+  }
+
+  .shopping-cart__body {
+    overflow: hidden;
+    padding-right: 20px;
+  }
+
+  .shopping-cart__title {
+    text-transform: none;
+    margin-bottom: 8px;
+    line-height: 24px;
+    font-size: 18px;
+    color: $white;
+  }
+
+  .shopping-cart__products {
+    font-size: 13px;
+    line-height: normal;
+    font-family: 'Work Sans', sans-serif;
+    color: rgba($white, 0.75);
+  }
+}

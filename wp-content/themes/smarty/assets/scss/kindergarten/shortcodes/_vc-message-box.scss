@@ -1,0 +1,122 @@
+.wpb_wrapper {
+  .vc_message_box {
+    padding: 28px 30px 28px 65px;
+    margin: 0 0 19.74px;
+    background: $white;
+    font-size: 18px;
+    color: $dark-gray;
+
+    p {
+      margin-bottom: 0;
+      line-height: normal;
+    }
+
+    &.vc_message_icon_hide {
+      padding: 28px 30px 28px 30px;
+    }
+  }
+
+  .vc_message_box-icon {
+    width: 65px;
+  }
+
+  .vc_message_box-icon,
+  .vc_message_box-icon > *,
+  .vc_message_box-icon > .fa{
+    font-size: 18px;
+  }
+
+  .vc_message_box-icon > * {
+    left: 30px;
+    transform: translate(0, -50%);
+  }
+
+  .vc_message_box-outline,
+  .vc_message_box-solid-icon {
+    border-width: 1px;
+    border-radius: 15px;
+  }
+
+  .vc_message_box-outline {
+    background: $white;
+
+    &.vc_color-danger,
+    &.vc_color-success,
+    &.vc_color-info,
+    &.vc_color-warning {
+      background: $white;
+    }
+
+    &.vc_color-info {
+      border-color: #00aaff;
+
+      .vc_message_box-icon {
+        color: #00aaff;
+      }
+    }
+
+    &.vc_color-success {
+      border-color: $green;
+
+      .vc_message_box-icon {
+        color: $green;
+      }
+    }
+
+    &.vc_color-warning {
+      border-color: $warning;
+
+      .vc_message_box-icon {
+        color: $warning;
+      }
+    }
+
+    &.vc_color-danger {
+      border-color: $error;
+
+      .vc_message_box-icon {
+        color: $error;
+      }
+    }
+
+    &.vc_message_icon_hide {
+      &.vc_color-danger,
+      &.vc_color-danger p {
+        color: $error;
+      }
+
+      &.vc_color-warning,
+      &.vc_color-warning p {
+        color: $warning;
+      }
+
+      &.vc_color-success,
+      &.vc_color-success p {
+        color: $green;
+      }
+
+      &.vc_color-info,
+      &.vc_color-info p {
+        color: #00aaff;
+      }
+    }
+  }
+}
+
+.vc_message_hide {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font: {
+    size: 16px;
+    weight: 300;
+  }
+  color: rgba(#030303, .25);
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: rgba(#030303, .25);
+  }
+}

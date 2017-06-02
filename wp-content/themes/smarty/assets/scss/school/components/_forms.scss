@@ -1,0 +1,280 @@
+// Input
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea {
+  border-radius: 0;
+  box-shadow: none;
+  appearance: none;
+}
+
+input[type="password"],
+input[type="text"] {
+  padding: 9px 20px;
+  background: $white;
+  border: 1px solid #e6e6e6;
+  color: $dark-blue;
+  line-height: 30px;
+  vertical-align: middle;
+  @include transition();
+
+  &:focus {
+    border-color: $green;
+  }
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #e6e6e6;
+  background: $white;
+  font-size: 16px;
+  line-height: 22px;
+  resize: none;
+  @include transition();
+
+  &:focus {
+    border-color: $green;
+  }
+}
+
+.post-password-form {
+  input[type="submit"] {
+    height: 50px;
+    padding: 0 15px;
+    background: transparent;
+    border: 2px solid $blue;
+    color: $dark-blue;
+    vertical-align: middle;
+    @include transition();
+
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+
+    &:active {
+      border-color: #007fbf;
+      background: #007fbf;
+      color: $white;
+    }
+  }
+}
+
+// Search Bar
+.search-bar {
+  margin-bottom: 40px;
+
+  .stm-search-form {
+    .stm-search-form__field {
+      height: 50px;
+      width: calc(100% - 210px);
+      background: $white;
+      padding: 0 20px;
+      border: 1px solid #e6e6e6;
+      border-radius: 0;
+      color: $dark-blue;
+      vertical-align: top;
+      @include transition();
+
+      &:focus {
+        border-color: $green;
+      }
+    }
+
+    .stm-search-form__submit {
+      position: relative;
+      float: right;
+      padding: 0 24px;
+      min-width: 200px;
+      background: transparent;
+      border: 2px solid $blue;
+      font-size: 16px;
+      text-align: center;
+      color: $dark-blue;
+      line-height: 46px;
+      white-space: nowrap;
+      @include transition();
+
+      span, i {
+        position: relative;
+      }
+
+      .stm-icon {
+        display: none;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: rgba( $black, .25 );
+        visibility: hidden;
+        opacity: 0;
+        @include transition();
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:active {
+        background: $blue;
+        color: $white;
+        border-color: $blue;
+      }
+
+      &:active {
+        &:after {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.search-bar__founded {
+  margin-top: 14px;
+  color: $dark-gray;
+}
+
+// Contact Form 7 - Feedback
+.wpcf7-text,
+.wpcf7-textarea {
+  display: block;
+  width: 100%;
+  padding: 9px 20px;
+  margin-bottom: 20px;
+  background: $white;
+  border: 1px solid #e6e6e6;
+  color: $dark-blue;
+  line-height: 30px;
+  @include transition();
+
+  &:focus {
+    border-color: $green;
+  }
+
+  &.wpcf7-not-valid {
+    border-color: $error;
+  }
+}
+
+.wpcf7-textarea {
+  height: 190px;
+  resize: none;
+}
+
+.wpcf7-submit {
+  height: 50px;
+  width: 160px;
+  background: transparent;
+  border: 2px solid $blue;
+  color: $dark-blue;
+  @include transition();
+
+  &:hover {
+    background: $blue;
+    color: $white;
+  }
+
+  &:active {
+    border-color: #007fbf;
+    background: #007fbf;
+    color: $white;
+  }
+}
+
+.wpcf7 {
+  .stm-btn {
+    min-width: 160px;
+    vertical-align: middle;
+    .stm-icon-arrow-right {
+      margin-top: -2px;
+      display: inline-block;
+    }
+  }
+}
+
+.wpcf7 {
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  .wpcf7-response-output {
+    background: $white;
+    padding: 28px 30px;
+    border-width: 1px;
+    margin: 20px 0;
+  }
+
+  .wpcf7-validation-errors {
+    border-color: $error;
+    color: $error;
+  }
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Comment form
+.comment-form {
+  input[type="text"],
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #e6e6e6;
+    background: $white;
+    font-size: 16px;
+    line-height: 22px;
+    @include transition();
+
+    &:focus {
+      border-color: $green;
+    }
+  }
+
+  input[type="text"] {
+    padding: 13px 20px;
+  }
+
+  textarea {
+    padding: 12px 20px;
+    resize: none;
+  }
+}
+
+.comment-form__submit-button {
+  height: 50px;
+  min-width: 160px;
+  padding: 0 30px;
+  border: 2px solid $blue;
+  background: transparent;
+  color: $dark-blue;
+  font-size: 16px;
+  @include transition();
+
+  &:hover {
+    background: $blue;
+    color: $white;
+  }
+
+  .stm-icon {
+    font-size: 6px;
+    margin-left: 6px;
+    position: relative;
+    top: -2px;
+  }
+}

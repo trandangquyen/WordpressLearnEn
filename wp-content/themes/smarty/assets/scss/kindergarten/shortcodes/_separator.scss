@@ -1,0 +1,36 @@
+.stm-separator {
+	margin-bottom: 41px;
+}
+
+.stm-separator_short {
+	width: 60px;
+}
+
+.stm-separator__line {
+	border-bottom: 2px solid $green;
+}
+
+.stm-separator__line-holder {
+	display: table-cell;
+	width: 49%;
+	vertical-align: middle;
+
+	.stm-separator__line {
+		width: 100%;
+	}
+}
+
+.stm-separator_has_item {
+	.stm-separator__item {
+		display: table-cell;
+		width: 1%;
+		padding: 0 20px;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+}
+
+.stm-separator__item_type_text {
+    font-weight: 600;
+	font-size: 14px;
+}

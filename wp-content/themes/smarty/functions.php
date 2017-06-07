@@ -15,6 +15,13 @@
  *
 */
 
+//Load layout
+function loadStyle(){
+    wp_enqueue_style('style', get_stylesheet_uri());
+}
+add_action('wp_enqueue_scripts','loadStyle');
+
+
 // Product Registration
 if(is_admin()) {
     require_once(get_template_directory() . '/admin/admin.php');

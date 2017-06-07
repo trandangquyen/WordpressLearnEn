@@ -27,3 +27,28 @@ Text Domain: smarty
         width: 1230px !important;
     }
 }
+
+.stm-nav_type_header ul li a{
+    font-weight: bold;
+    font-size: 20px;
+}
+.stm-nav_type_header ul li a:hover{
+    color: #fc9934 !important;
+    text-shadow: -1px 0 #3599f7, 0 1px #3599f7, 1px 0 #3599f7, 0 -1px #3599f7;
+}
+
+.stm-nav_type_header ul li ul li a {
+    font-size: 15px;
+    font-family: sans-serif;    
+}
+.stm-nav__menu_type_header > .menu-item {
+    text-align: center;
+    position: relative;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 16px;
+    z-index: 9;
+    /* display: block; */
+    /* overflow: auto; */
+    width: 100px;
+}

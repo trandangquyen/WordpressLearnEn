@@ -1769,7 +1769,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
     }
 
     .stm-nav_type_header {
-      .stm-nav__menu_type_header > {
+      .stm-nav__menu_type_header  {
         .menu-item {
           margin: 0 12px;
           font-size: 15px;

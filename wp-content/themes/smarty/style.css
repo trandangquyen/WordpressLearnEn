@@ -30,3 +30,7 @@ Text Domain: smarty
         width: 1230px !important;
     }
 }
+.wp-tiles-byline-title{
+    font-size: 16px;
+    color: #fff;
+}
